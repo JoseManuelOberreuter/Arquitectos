@@ -1,0 +1,21 @@
+
+footer {
+    width: 100%;
+
+    padding: 100px 0;
+
+    color: #fff;
+    background-color: #A1C298;
+
+    text-align: center;
+}
+
+.icons {
+    margin: 30px;
+}
+
+.icons img{
+    padding: 20px;
+    height: 50px;
+    width: 50px;
+}

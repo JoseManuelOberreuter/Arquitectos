@@ -1,0 +1,52 @@
+
+
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    margin: 0px auto;
+
+
+}
+
+
+.grid-img{
+    position: relative;
+    text-align: center;
+
+    height: 90%;
+}
+
+
+.grid-text{
+    width: 600px;
+    height: 100%;
+    margin-top: 30%;
+
+    position: relative;
+    text-align: center;
+}
+
+.grid-text2{
+    width: 600px;
+    height: 100%;
+    margin: 0 auto;
+    margin-top: 20%;
+    position: relative;
+    text-align: center;
+
+}
+
+.grid-text h2, .grid-text2 h2{
+    font-size: 35px;
+}
+
+.grid-text p, .grid-text2 p {
+    font-size: 20px;
+    margin: 20px;
+    text-align: justify;
+    line-height: 30px;
+}
+
+
+

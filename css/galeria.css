@@ -1,0 +1,22 @@
+
+.galeria{
+    margin: 150px auto;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+
+
+
+}
+
+.img-galeria {
+    margin: 50px auto;
+    filter: brightness(100%);
+    transition:  filter .5s;
+    cursor: pointer;
+}
+
+.img-galeria:hover{
+    filter: brightness(60%);
+}
