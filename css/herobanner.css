@@ -1,17 +1,22 @@
 
 .herobaner {
+    min-height: 100%;
+    min-width: 100%;
     margin: 0;
     padding: 0;
-
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
 }
 
 .herobaner video{
 
-    position: relative;
-
-    min-height: 100%;
-    min-width: 100%;
+    position:relative;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
     z-index: 0;
 
     filter: brightness(60%);
@@ -19,6 +24,8 @@
     /* background-image: linear-gradient(rgb(0, 0, 0, 0.3),rgb(0, 0, 0,0.3)); */
 
 }
+
+
 
 .herobaner-content {
 

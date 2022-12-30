@@ -3,7 +3,6 @@
 .grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-
     margin: 0px auto;
 
 
@@ -13,12 +12,13 @@
 .grid-img{
     position: relative;
     text-align: center;
-
     height: 90%;
+    width: 100%;
 }
 
 
 .grid-text{
+    color: rgb(217, 217, 217);
     width: 600px;
     height: 100%;
     margin-top: 30%;
@@ -28,6 +28,7 @@
 }
 
 .grid-text2{
+    color: rgb(217, 217, 217);
     width: 600px;
     height: 100%;
     margin: 0 auto;

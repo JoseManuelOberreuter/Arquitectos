@@ -1,75 +1,95 @@
 
-header {
+#barralateral {
     z-index: 2;
-
     position: fixed;
-    height: 100px;
-    width: 100%;
-    
-    background-color: none;
-    /* background-color: #9F8772; */
-    
+    top: 0;
+    left: 0;
+    width: 100px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: background 2s;
 }
 
 .header-scroll{
     background-color: #9F8772;
 }
 
-.logo {
-    float: left;
-    margin: 25px 50px;
-}
-
-.logo img {
-    height: 50px;
-    width: 150px;
-}
-.btn {
-    margin: 40px 0px;
-    float: right;
-
-}
-
-.btn button {
-    font-size: medium;
-
-    cursor: pointer;
-    margin: 0px 5px;
-    padding: 3px 5px;
 
 
-    color: #ffff;
-
-    background-color: transparent;
-    border:none;
+.links {
     
-    /* background-color: #9F8772;
-    border: 2px solid #9F8772; */
-    transition: border-bottom 2s;
+    display: block;
+    margin-top: 150px;
+
 }
 
-.btn button:hover {
-    border-bottom:1px solid #fff ;
-}
+.links a {
+    display: grid;
+    transform:rotate(270deg) ;
+    font-size: 20px;
+    height:25px;
+    width:auto;
+    text-align: center;
+    text-decoration: none;
 
-
-.btn-principal button{
-    font-size:15px;
-    display: table;
-    float: right;
-    margin: 25px 50px;
-    padding: 20px 25px;
-    cursor: pointer;
+    letter-spacing: 5px;
 
     color: #ffff;
-    background-color: #A1C298;
-    border: none;
+    cursor: pointer;
 
-    background-image: linear-gradient(rgb(0, 0, 0,0), rgb(0, 0, 0, 0));
 
-    transition: background-color 1s ;
 }
 
-.btn-principal button:hover{
-    background-image: linear-gradient(rgb(0, 0, 0,0.3), rgb(0, 0, 0, 0.3));
+
+
+
+
+.link-disabled {
+    opacity: 0.5;
+    padding: 0 10px;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) 50%,  rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0.2));
+    background-size:200% 10%;
+    transition: background 2s, opacity 2s;
+}
+
+
+.link-disabled:hover {
+    background-position: -100% 99.9%;
+    opacity: 1;
+}
+
+.link-activated{
+    padding: 0 10px;
+    background: rgba(255, 255, 255, .2);
+    opacity: 1;
+}
+
+#menu-center{
+    margin-top: 150px;
+    margin-bottom: 100px;
+}
+
+
+
+
+.icons-header {
+
+    color: #9F8772;
+    display: block;
+    margin-top: 80px;
+    margin-left: 35px;
+
+}
+
+.icons-header img {
+    height: 30px;
+    width: 30px;
+    display: block;
+    margin:20px 0 ;
+    opacity: 0.5;
+    transition: opacity 1s;
+}
+
+.icons-header img:hover {
+    opacity: 1    ;
 }
