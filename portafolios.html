@@ -12,9 +12,14 @@
     <link rel="stylesheet" href="css/tabla.css">
     <link rel="stylesheet" href="css/galeria.css">
     <link rel="stylesheet" href="css/footer.css">
-    
+
+    <!-- FADE -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
+
+
 </head>
-<body>
+<body >
     
         <!-- BARRA LATERAL -->
         <div  id="barralateral">
@@ -41,10 +46,10 @@
 
 
             <!-- TABLA DE IMAGEN Y TEXTO -->
-            <div class="grid">
+            <div class="grid" id="portafolio-principal">
     
                 <div class="grid-img">
-                    <img src="/Arquitectos/img/planos.jpg" alt="PLANOS"  height="100%" width="80%">
+                    <img src="/Arquitectos/img/planos.jpg" alt="PLANOS" id="imagen-principal" height="100%" width="80%">
                 </div>
                     
                 <div class="grid-text">
@@ -65,81 +70,57 @@
     
             <!-- GALERIA DE FOTOS -->
             <div class="galeria">
-    
-                <div class="img-galeria">
-                    <a href="#">
-                        <img src="/Arquitectos/img/galeria1.jpg" alt="" height="400px" width="350px">
-                    </a>
+            
+                <div class="img-galeria" data-aos="fade-up"  data-aos-duration="1000" onclick="scrollPortafolio()">
+                    <img src="/Arquitectos/img/galeria1.jpg" alt="" id="imagen1" height="400px" width="350px" >
                 </div>
                 
-                <div class="img-galeria">
-                    <a href="#">
-                        <img src="/Arquitectos/img/galeria2.jpg" alt="" height="400px" width="350px">
-                    </a>
+                <div class="img-galeria" data-aos="fade-up"  data-aos-duration="1000" onclick="scrollPortafolio()">
+                    <img src="/Arquitectos/img/galeria2.jpg" alt="" id="imagen2" height="400px" width="350px">
                 </div>
-    
-                <div class="img-galeria">
-                    <a href="#">
-                        <img src="/Arquitectos/img/galeria3.jpg" alt="" height="400px" width="350px">
-                    </a>
+
+                <div class="img-galeria" data-aos="fade-up"  data-aos-duration="1000" onclick="scrollPortafolio()">
+                    <img src="/Arquitectos/img/galeria3.jpg" alt="" id="imagen3" height="400px" width="350px">
                 </div>
-    
-                <div class="img-galeria">
-                    <a href="#">
-                        <img src="/Arquitectos/img/galeria4.jpg" alt="" height="400px" width="350px">
-                    </a>
+
+                <div class="img-galeria" data-aos="fade-up"  data-aos-duration="1000" onclick="scrollPortafolio()">
+                    <img src="/Arquitectos/img/galeria4.jpg" alt="" id="imagen4" height="400px" width="350px">
                 </div>
-    
-                <div class="img-galeria">
-                    <a href="#">
-                        <img src="/Arquitectos/img/galeria5.jpg" alt="" height="400px" width="350px">
-                    </a>
+
+                <div class="img-galeria" data-aos="fade-up"  data-aos-duration="1000" onclick="scrollPortafolio()">
+                    <img src="/Arquitectos/img/galeria5.jpg" alt="" id="imagen5" height="400px" width="350px">
                 </div>
-    
-                <div class="img-galeria">
-                    <a href="#">
-                        <img src="/Arquitectos/img/galeria6.jpg" alt="" height="400px" width="350px">
-                    </a>
+
+                <div class="img-galeria" data-aos="fade-up"  data-aos-duration="1000" onclick="scrollPortafolio()">
+                    <img src="/Arquitectos/img/galeria6.jpg" alt="" id="imagen6" height="400px" width="350px">
                 </div>
-    
-                <div class="img-galeria">
-                    <a href="#">
-                        <img src="/Arquitectos/img/galeria7.jpg" alt="" height="400px" width="350px">
-                    </a>
+
+                <div class="img-galeria" data-aos="fade-up"  data-aos-duration="1000" onclick="scrollPortafolio()">
+                    <img src="/Arquitectos/img/galeria7.jpg" alt="" id="imagen7" height="400px" width="350px">
                 </div>
-    
-                <div class="img-galeria">
-                    <a href="#">
-                        <img src="/Arquitectos/img/galeria8.jpg" alt="" height="400px" width="350px">
-                    </a>
+
+                <div class="img-galeria" data-aos="fade-up"  data-aos-duration="1000" onclick="scrollPortafolio()">
+                    <img src="/Arquitectos/img/galeria8.jpg" alt="" id="imagen8" height="400px" width="350px">
                 </div>
-    
-                <div class="img-galeria">
-                    <a href="#">
-                        <img src="/Arquitectos/img/galeria9.jpg" alt="" height="400px" width="350px">
-                    </a>
+
+                <div class="img-galeria" data-aos="fade-up"  data-aos-duration="1000" onclick="scrollPortafolio()">
+                    <img src="/Arquitectos/img/galeria9.jpg" alt="" id="imagen9" height="400px" width="350px">
                 </div>
-    
-                <div class="img-galeria">
-                    <a href="#">
-                        <img src="/Arquitectos/img/galeria10.jpg" alt="" height="400px" width="350px">
-                    </a>
+
+                <div class="img-galeria" data-aos="fade-up"  data-aos-duration="1000" onclick="scrollPortafolio()">  
+                    <img src="/Arquitectos/img/galeria10.jpg" alt="" id="imagen10" height="400px" width="350px">
                 </div>
-    
-                <div class="img-galeria">
-                    <a href="#">
-                        <img src="/Arquitectos/img/galeria11.jpg" alt="" height="400px" width="350px">
-                    </a>
+
+                <div class="img-galeria" data-aos="fade-up"  data-aos-duration="1000" onclick="scrollPortafolio()">
+                    <img src="/Arquitectos/img/galeria11.jpg" alt="" id="imagen11" height="400px" width="350px">
                 </div>
-    
-                <div class="img-galeria">
-                    <a href="#">
-                        <img src="/Arquitectos/img/galeria12.jpg" alt="" height="400px" width="350px">
-                    </a>
+
+                <div class="img-galeria" data-aos="fade-up"  data-aos-duration="1000" onclick="scrollPortafolio()">
+                    <img src="/Arquitectos/img/galeria12.jpg" alt="" id="imagen12" height="400px" width="350px">
                 </div>
-    
-    
-    
+
+
+
             </div>
             
             <div class="margin"></div>
@@ -164,6 +145,15 @@
     
         <!-- JAVASCRIPT -->
         <script src="javascript/header.js"></script>
+        <script src="javascript/portafolios.js"></script>
+        
+        <!-- FADE JAVASCRIPT -->
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+        <script>
+            AOS.init();
+        </script>
+
+        
 </body>
 </html>

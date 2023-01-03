@@ -19,3 +19,8 @@ main {
 .big-margin {
     margin: 1000px 0px;
 }
+
+.fadebug{
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
