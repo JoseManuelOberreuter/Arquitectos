@@ -20,3 +20,21 @@
 .img-galeria:hover{
     filter: brightness(60%);
 }
+
+
+
+@media screen and (max-width: 600px) {
+
+    .galeria{
+        display: block;
+        margin: 0 auto;
+
+    }
+
+
+    .img-galeria img{
+
+        display: flex;
+        margin: 0 auto;
+    }
+}

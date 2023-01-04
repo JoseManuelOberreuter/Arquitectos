@@ -18,3 +18,7 @@ function handleScroll() {
 
 // Finally, we will use the window.addEventListener() method to attach the 'scroll' event to the window object, and specify our handleScroll function as the event handler
 window.addEventListener('scroll', handleScroll);
+
+
+
+
