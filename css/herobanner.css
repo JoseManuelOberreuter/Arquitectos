@@ -1,3 +1,10 @@
+:root{
+    --color1: #1b1517;
+    --color2: #535749;
+    --color3: #2a3036;
+    --color4: #574f5d;
+    --color5: #838187;
+}
 
 .herobaner {
     min-height: 100%;
@@ -54,7 +61,7 @@
     cursor: pointer;
 
     color: #ffff;
-    background-color: #A1C298;
+    background-color: var(--color5);
     border: none;
 
     background-image: linear-gradient(rgb(0, 0, 0,0), rgb(0, 0, 0, 0));

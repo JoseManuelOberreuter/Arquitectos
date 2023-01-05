@@ -38,43 +38,79 @@
 
         <!-- FORMULARIO DE CONTACTO -->
         <div class="contacto">
-            <form id="contactForm" action="#" method="POST">
-                <h1>Contacto</h1>
-                
+            <form id="contactForm" action="https://formsubmit.co/josemanueloberreuter@gmail.com" method="POST" onsubmit="return validateForm()">
+                <input type="hidden" name="_next" value="www.instagram.com">
+                <input type="hidden" name="_subject" value="Nuevo Presupuesto!">
+                <input type="hidden" name="_captcha" value="false">
+
+
+                <h1>Presupuesto</h1>
                 <!-- NOMBRE -->
                 <div class="input-contact">
-                    <label for="name" >Nombre: </label>
-                    <input autofocus required type="text" id="name" name="Nombre" maxlength="100" placeholder="Ingrese su nombre acá." onkeyup="checkName()">
-                    <small class="error" id="errorName"><b>Debes igresar un nombre</b></small>
-                </div>
-
-                <!-- RUT -->
-                <div class="input-contact">
-                    <label for="rut" class="text-dark">Rut: </label>
-                    <input required type="text" id="rut" name="Rut" maxlength="10" placeholder="Ingrese su rut sin punto y con guion acá." onkeyup="checkRut()">
-                    <small class="error" id="errorRut"><b>Debes igresar un rut</b></small>
+                    <label for="name" >Nombre y apellido </label>
+                    <input autofocus required type="text" id="inputname" name="Nombre" maxlength="100" placeholder="Ingrese su nombre" onkeyup="checkName()">
+                    <small class="error" id="errorName"></small>
                 </div>
 
                 <!-- EMAIL -->
                 <div class="input-contact">
-                    <label for="email" class="text-dark">Email de contacto: </label>
-                    <input required type="email" id="email" name="Mail" placeholder="Ingrese su email acá." onkeyup="checkEmail()">
-                    <small class="error" id="errorEmail"><b>Debes igresar un email</b></small>
+                    <label for="email" class="text-dark">Correo electronico: </label>
+                    <input required type="email" id="inputemail" name="Mail" placeholder="Ingrese su correo electronico" onkeyup="checkEmail()">
+                    <small class="error" id="errorEmail"></small>
+                </div>
+
+                <!-- EMAIL CONFIRMACION-->
+                <div class="input-contact">
+                    <label for="emailconf" class="text-dark">Confirmacion de correo electronico: </label>
+                    <input required type="email" id="emailconf" name="Mail de Confirmacion" placeholder="Vuelva a escribir su correo electronico" onkeyup="checkEmailConf()">
+                    <small class="error" id="errorEmailConf"></small>
                 </div>
 
                 <!-- TELEFONO -->
                 <div class="input-contact">
                     <label for="phone" class="text-dark">Teléfono de contacto: </label>
-                    <input required type="tel" id="phone" name="Telefono" placeholder="Ingrese el número acá." onkeyup="checkPhone()">
-                    <small class="error" id="errorPhone"><b>Debes igresar un telefono</b></small>
+                    <input required type="tel" id="phone" name="Telefono" placeholder="Ingrese el número" onkeyup="checkPhone()" class="input-contact">
+                    <small class="error" id="errorPhone"></small>
                 </div>
+
+                <!-- UbICACION -->
+                <div class="input-contact">
+                    <label for="ubicacion" class="text-dark">¿Donde queda el proyecto?</label>
+                    <input required type="text" id="ubicacion" name="ubicacion" placeholder="Ingrese la dirección, comuna y region" onkeyup="checkUbi()">
+                    <small class="error" id="errorUbi"></small>
+                </div>
+
+                <!-- QUE ESTAS BUSCANDO -->
+                <div class="input-contact">
+                    <label for="opciones" class="text-dark">¿Que estas buscando?</label>
+                    <select name="opciones" id="opciones">
+                        <option value="#" disabled selected> Seleccione una opción</option>
+                        <option value="Diseño de vivienda unica">Diseño de vivienda unica</option>
+                        <option value="Diseño de vivienda comercial" >Diseño de vivienda comercial</option>
+                        <option value="Diseño de vivienda modular-ármala tu mismo" >Diseño de vivienda modular-ármala tu mismo</option>
+                        <option value="Remodelación" >Remodelación</option>
+                        <option value="Diseño interior" >Diseño interior</option>
+                        <option value="Diseño local comercial" >Diseño local comercial</option>
+                        <option value="Anteproyecto" >Anteproyecto</option>
+                        <option value="Locales comerciales" >Locales comerciales</option>
+                        <option value="Patentes comerciales" >Patentes comerciales</option>
+                        <option value="Regularización urbana/rural" >Regularización urbana/rural</option>
+                        <option value="Subdivision" >Subdivision</option>
+                        <option value="Loteo" >Loteo</option>
+                        <option value="Construcción" >Construcción</option>
+                    </select>
+                    <small class="error" id="errorOpciones"></small>
+                </div>
+
+
 
                 <!-- MENSAJE  -->
                 <div class="input-contact">
                     <label for="message" class="text-dark">Mensaje: </label>
                     <textarea required id="message" name="Mensaje" placeholder="Escriba acá el motivo de consulta." onkeyup="checkMessage()"></textarea>
-                    <small class="error" id="errorMessage"><b>Debes igresar un mensaje acá.</b></small>
+                    <small class="error" id="errorMessage"></small>
                 </div>
+
                 <div class="btn-contacto">
                     <button id="buttonSend" type="submit" value="submit">Enviar formulario</button>         
                 </div>
@@ -103,7 +139,7 @@
 
     <!-- JAVASCRIPT -->
     <script src="javascript/header.js"></script>
-
+    <script src="javascript/form.js"></script>
 
 
 </body>

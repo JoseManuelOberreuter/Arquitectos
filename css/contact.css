@@ -1,3 +1,10 @@
+:root{
+    --color1: #1b1517;
+    --color2: #535749;
+    --color3: #2a3036;
+    --color4: #574f5d;
+    --color5: #838187;
+}
 
 .contacto {
     display: block;
@@ -9,7 +16,7 @@
     padding: 50px 25px;
 
     color: #fff;
-    background-color: rgba(255, 255, 255, .2);
+    background-color: var(--color5);
     border: 1px solid #fff;
 }
 
@@ -28,7 +35,7 @@
     cursor: pointer;
 
     color: #ffff;
-    background-color: #A1C298;
+    background-color: var(--color3);
     border: none;
 
     background-image: linear-gradient(rgb(0, 0, 0,0), rgb(0, 0, 0, 0));
@@ -55,11 +62,24 @@
     color: #fff;
     background: none;
     border: none;
-    border-bottom: 1px solid #A1C298;
+    border-bottom: 1px solid var(--color3);
 }
 
-.input-contact input::placeholder, .input-contact textarea::placeholder{
-    color: #A1C298;
+.input-contact select {
+    width: 100%;
+    margin: 10px 0px;
+    padding: 5px 0px;
+    padding-left: 5px;
+
+    color: #fff;
+    background: none;
+    border: 1px solid var(--color3);
+
+
+}
+
+.input-contact input::placeholder, .input-contact textarea::placeholder, .input-contact select{
+    color: var(--color3);
 }   
 
 .input-contact input:focus, .input-contact textarea:focus {
@@ -78,7 +98,7 @@
 
     color: #fff;
     background: none;
-    border: 1px solid #A1C298;
+    border: 1px solid var(--color3);
 
 
 }

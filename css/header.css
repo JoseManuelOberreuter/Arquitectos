@@ -1,3 +1,10 @@
+:root{
+    --color1: #1b1517;
+    --color2: #535749;
+    --color3: #2a3036;
+    --color4: #574f5d;
+    --color5: #838187;
+}
 
 #barralateral {
     z-index: 2;
@@ -9,15 +16,7 @@
     background-color: rgba(0, 0, 0, 0.0);
     transition: background 2s;
 }
-
-
-
-
-.header-scroll{
-    background-color: #9F8772;
-}
-
-
+    
 
 .links {
     
