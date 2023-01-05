@@ -38,8 +38,8 @@
 
         <!-- FORMULARIO DE CONTACTO -->
         <div class="contacto">
-            <form id="contactForm" action="https://formsubmit.co/josemanueloberreuter@gmail.com" method="POST" onsubmit="return validateForm()">
-                <input type="hidden" name="_next" value="www.instagram.com">
+            <form id="contactForm" action="https://formsubmit.co/josemanueloberreuter@gmail.com" method="POST" />            
+                <input type="hidden" name="_next" value="https://instagram.com">
                 <input type="hidden" name="_subject" value="Nuevo Presupuesto!">
                 <input type="hidden" name="_captcha" value="false">
 
@@ -83,8 +83,8 @@
                 <!-- QUE ESTAS BUSCANDO -->
                 <div class="input-contact">
                     <label for="opciones" class="text-dark">¿Que estas buscando?</label>
-                    <select name="opciones" id="opciones">
-                        <option value="#" disabled selected> Seleccione una opción</option>
+                    <select name="opciones" id="opciones" onkeydown="checkSelect()"  onchange="checkSelect()">
+                        <option value="" disabled selected> Seleccione una opción</option>
                         <option value="Diseño de vivienda unica">Diseño de vivienda unica</option>
                         <option value="Diseño de vivienda comercial" >Diseño de vivienda comercial</option>
                         <option value="Diseño de vivienda modular-ármala tu mismo" >Diseño de vivienda modular-ármala tu mismo</option>

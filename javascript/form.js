@@ -1,17 +1,4 @@
-const form = document.getElementById("contactForm");
-const divDisplay = document.getElementById("afterSend");
 
-// SENDING FORM
-form.addEventListener("submit", (e) => {
-
-    e.preventDefault();
-
-    form.style.display = "none";
-    divDisplay.style.display = "block";
-
-    console.log('Formulario enviado')
-    
-});
 
 // CHECK INPUTS 
 function checkName(){
@@ -22,11 +9,11 @@ function checkName(){
     const errorName = document.getElementById('errorName');
 
     if (nameTrim === '' || nameValue == null){
-        name.style.border = '3px solid red';
+        name.style.border = '2px solid red';
         errorName.style.display = 'block';
         errorName.innerHTML = '<b>Debes escribir un nombre </b>';
     } else {
-        name.style.border = '3px solid green';
+        name.style.border = '2px solid green';
         errorName.style.display = 'none'
     }
 }
@@ -37,17 +24,53 @@ function checkEmail(){
     const emailValue = email.value;
     const emailTrim = emailValue.trim();
 
+
+    const emailconf = document.getElementById("emailconf");
+    const emailconfValue = emailconf.value;
+
+
+
     const errorEmail = document.getElementById('errorEmail');
+    const errorEmailConf = document.getElementById('errorEmailConf');
+
 
     if (emailTrim === '' || emailValue == null){
-        email.style.border = '3px solid red'
+        email.style.border = '2px solid red'
         errorEmail.style.display = 'block';
         errorEmail.innerHTML = '<b>Debes escribir un correo electronico</b>'
     } else {
-        email.style.border = '3px solid green';
-        errorEmail.style.display = 'none'
+
+        // Comparar si ambos valores tienen los mismos caracteres
+        if (emailValue.split('').sort().join('') !== emailconfValue.split('').sort().join('')) {
+            email.style.border = '2px solid red'
+            errorEmail.style.display = 'block';
+            errorEmail.innerHTML = '<b>Los correos no coinciden</b>'
+
+            emailconf.style.border = '2px solid red'
+            errorEmailConf.style.display = 'block';
+            errorEmailConf.innerHTML = '<b>Los correos no coinciden</b>'
+
+        
+        } else if (emailValue.split('').sort().join('') == emailconfValue.split('').sort().join('')) {
+
+            email.style.border = '2px solid green';
+            errorEmail.style.display = 'none'
+
+            emailconf.style.border = '2px solid green';
+            errorEmailConf.style.display = 'none'
+
+        }
     }
 }
+
+
+
+
+
+
+
+
+
 
 function checkEmailConf(){
 
@@ -63,21 +86,35 @@ function checkEmailConf(){
 
 
     if (emailconfTrim === '' || emailconfValue == null){
-        emailconf.style.border = '3px solid red'
+        emailconf.style.border = '2px solid red'
         errorEmailConf.style.display = 'block';
         errorEmailConf.innerHTML = '<b>Debes escribir nuevamente el correo electronico</b>'
+        
     
     } else {
 
-        // Comparar si ambos valores son iguales
-        if (emailValue !== emailconfValue) {
+        // Comparar si ambos valores tienen los mismos caracteres
+        if (emailValue.split('').sort().join('') !== emailconfValue.split('').sort().join('')) {
             // Mostrar mensaje de error
+
+            emailconf.style.border = '2px solid red'
+            errorEmailConf.style.display = 'block';
+            errorEmailConf.innerHTML = '<b>Los correos no coinciden</b>'
+
+            email.style.border = '2px solid red'
+            errorEmail.style.display = 'block';
             errorEmail.innerHTML = "<b>Los correos no coinciden</b>";
-            errorEmailConf.innerHTML = "<b>Los correos no coinciden</b>";
-        }     
-        
-        emailconf.style.border = '3px solid green';
-        errorEmailConf.style.display = 'none'
+
+
+        } else if (emailValue.split('').sort().join('') == emailconfValue.split('').sort().join('')) {
+
+            email.style.border = '2px solid green';
+            errorEmail.style.display = 'none'
+
+            emailconf.style.border = '2px solid green';
+            errorEmailConf.style.display = 'none'
+
+        }
     }
 
 }
@@ -90,11 +127,11 @@ function checkPhone() {
     const errorPhone = document.getElementById('errorPhone');
 
     if (phoneTrim === '' || phoneValue == null){
-        phone.style.border = '3px solid red'
+        phone.style.border = '2px solid red'
         errorPhone.style.display = 'block';
         errorPhone.innerHTML = '<b>Debes escribir un numero de telefono</b>'
     } else {
-        phone.style.border = '3px solid green';
+        phone.style.border = '2px solid green';
         errorPhone.style.display = 'none'
     }
 }
@@ -107,17 +144,39 @@ function checkUbi() {
     const errorUbi = document.getElementById('errorUbi');
 
     if (ubiTrim === '' || ubiValue == null){
-        ubi.style.border = '3px solid red';
+        ubi.style.border = '2px solid red';
         errorUbi.style.display = 'block';
         errorUbi.innerHTML = '<b>Debes escribir una dirección</b>';
     } else {
-        ubi.style.border = '3px solid green';
+        ubi.style.border = '2px solid green';
         errorUbi.style.display = 'none';
     }
 }
 
 
- 
+function checkSelect() {
+    const select = document.getElementById('opciones');
+    const selectValue = select.value;
+
+    const errorOpciones = document.getElementById('errorOpciones');
+
+    if (selectValue === ''){
+        select.style.border = '2px solid red';
+        errorOpciones.style.display = 'block'
+        errorOpciones.innerHTML = '<b>Debes seleccionar una opción</b>';
+
+
+    } else {
+        select.style.border = '2px solid green';
+        errorOpciones.style.display = 'none'
+        errorOpciones.innerHTML = '';
+
+    }
+
+}
+
+
+
 
 function checkMessage(){
     const message = document.getElementById("message");
@@ -126,11 +185,11 @@ function checkMessage(){
     const errormessage = document.getElementById('errorMessage');
 
     if (messageTrim === '' || messageValue == null){
-        message.style.border = '3px solid red'
+        message.style.border = '2px solid red'
         errormessage.style.display = 'block';
         errormessage.innerHTML = '<b>Debes escribir un mensaje</b>'
     } else {
-        message.style.border = '3px solid green';
+        message.style.border = '2px solid green';
         errormessage.style.display = 'none'
     }
 }

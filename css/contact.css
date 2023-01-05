@@ -105,6 +105,8 @@
 
 .error{
     display: none;
-    color: red;
+    color: #ca0000;
+    font-size: 15PX;
+    letter-spacing: 1px;
 
 }
