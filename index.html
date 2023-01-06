@@ -15,13 +15,20 @@
     <link rel="stylesheet" href="css/instagram.css">
     <link rel="stylesheet" href="css/contact.css">  
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/carrusel.css">
 
     <!-- FADE -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"> 
 
 
-</head>
+    <!-- CARRUSEL DE IMAGENES-->
+    <link rel="stylesheet" href="https://unpkg.com/flickity@2/dist/flickity.min.css">
+    <script src="https://unpkg.com/flickity@2/dist/flickity.pkgd.min.js"></script></head>
+
+
+
+
 <body>
 
     <!-- BARRA LATERAL -->
@@ -66,7 +73,7 @@
 
         <div class="big-margin"></div>
 
-                <!-- TABLA DE TEXTO E IMAGEN -->
+        <!-- TABLA DE TEXTO E IMAGEN -->
         <div class="grid" data-aos="fade-right" data-aos-duration="1000">
         
                 
@@ -117,6 +124,35 @@
         </div>
 
         <div class="margin"></div>
+        
+        <div class="carousel">
+            <div class="carousel-cell">
+                <img src="img/galeria1.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/galeria2.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/galeria3.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/galeria4.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/galeria5.jpg" alt="">
+            </div>
+            <div class="carousel-cell">
+                <img src="img/galeria6.jpg" alt="">
+            </div>
+        </div>
+          
+
+          
+        
+        
+        <div class="margin"></div>
+
+
 
         <!-- GALERIA DE FOTOS -->
         <div class="galeria">
@@ -232,7 +268,10 @@
     
     <!-- JAVASCRIPT -->
     <script src="javascript/header.js" ></script>
+    <script src="javascript/carrusel.js" ></script>
 
+
+    <!-- FADE JS -->
     <script >
         AOS.init();
     </script>
