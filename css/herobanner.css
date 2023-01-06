@@ -83,10 +83,12 @@
 
 
     .herobaner {
+        height: 600px;
     }
 
     .herobaner video{
-        
+        height: 600px;
+        transform: scale(4);
     }    
     
 
