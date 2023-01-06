@@ -81,10 +81,12 @@
         display: block;
     }
 
-    .herobaner video{
 
-        height:200%;
-        width:100%;
+    .herobaner {
+    }
+
+    .herobaner video{
+        
     }    
     
 
