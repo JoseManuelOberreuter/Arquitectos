@@ -41,15 +41,28 @@ main {
     margin: 1000px 0px;
 }
 
-.fadebug{
-    overflow-x: hidden;
-    overflow-y: hidden;
+
+@media screen and (min-width: 601px) and (max-width: 799px) {
+    main {
+    margin-left: 50px;
+    margin-right: 50px;
 }
+
+}
+
 
 @media screen and (max-width: 600px) {
     main {
         margin-left: 0;
+        margin-right: 0;
     }
+    .margin {
+        margin: 25px 0px;
+    }
+    .margen-oculto{
+        display: none;
+    }
+
     .big-margin{
         margin: 200% 0px;
     }

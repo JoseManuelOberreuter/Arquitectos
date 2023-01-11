@@ -1,0 +1,43 @@
+.menu-button{
+    display: none;
+    z-index: 999;
+    position: fixed;
+
+    bottom: 40px;
+    right: 40px;
+
+
+    padding: 10px;
+    border: none;
+    border-radius: 100%;
+
+}
+
+
+.menu-button__line {
+    width: 30px;
+    height: 3px;
+    background-color: black;
+    margin: 5px 0;
+
+
+}
+
+.barraBot{
+    width: 25px;
+    transform: rotate(-45px);
+}
+
+.barraTop{
+    width: 25px;
+    transform: rotate(45px);
+}
+
+  @media screen and (max-width: 600px) {
+
+    .menu-button {
+        display:block;
+
+    }
+  }
+  

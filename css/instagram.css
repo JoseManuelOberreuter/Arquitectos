@@ -5,10 +5,61 @@
 }
 
 .post-ig {
-    width: 30%;
+    width: 35%;
     height: 50%;
     margin: 0 auto;
 
-    box-shadow: 0px 0px 5px 0px;
    
+}
+
+@media screen and (min-width: 800px) and (max-width: 1000px) {
+
+    .ig{
+        display: block;
+        margin: 100px auto;
+    }
+
+    .post-ig {
+        width: 60%;
+        height: 50%;
+    
+        margin: 0 auto;
+        padding: 10px;
+
+    }
+
+
+}
+
+@media screen and (min-width: 601px) and (max-width: 799px) {
+    .ig{
+        display: block;
+        margin: 100px auto;
+    }
+
+    .post-ig {
+        width: 60%;
+        height: 50%;
+    
+        margin: 0 auto;
+        padding: 10px;
+
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .ig{
+        display: block;
+        margin: 100px auto;
+    }
+
+    .post-ig {
+        width: 90%;
+        height: 50%;
+    
+        margin: 0 auto;
+        padding: 10px;
+
+    }
 }
