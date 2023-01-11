@@ -1,6 +1,8 @@
 var elem = document.querySelector('.carousel');
 
 document.querySelector('.carousel').style.height = '500px';
+document.querySelector('.carousel').style.marginTop = '200px';
+
 var flkty = new Flickity( elem, {
   // opciones aquí
   cellAlign: 'center',
@@ -10,7 +12,7 @@ var flkty = new Flickity( elem, {
   pageDots: false,
   wrapAround: true,
 //   autoPlay: true,
-  autoPlay: 1500,
+  autoPlay: 2000,
   lazyLoad: 2,
   pauseAutoPlayOnHover: false,
   selectedAttraction: 0.002,

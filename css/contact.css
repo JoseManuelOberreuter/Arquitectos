@@ -4,6 +4,7 @@
     --color3: #2a3036;
     --color4: #574f5d;
     --color5: #838187;
+    --color6: #fff;
 }
 
 .contacto {
@@ -16,12 +17,19 @@
     padding: 50px 25px;
 
     color: #fff;
-    background-color: var(--color5);
+    background-color: var(--color3);
     border: 1px solid #fff;
 }
 
 .contacto h1{
     text-align: center;
+}
+
+.text-contact{
+    margin: 0 auto;
+    width: 90%;
+    text-align: justify;
+
 }
 
 .btn-contacto button{
@@ -48,8 +56,12 @@
 }
 
 .input-contact {
+    
     margin: 15px auto;
-
+    padding: 30px;
+    color: var(--color1);
+    background-color: var(--color6);
+    border-radius:10px;
 }
 
 .input-contact input {
@@ -59,7 +71,7 @@
     padding: 5px 0px;
     padding-left: 5px;
 
-    color: #fff;
+    color: var(--color1);
     background: none;
     border: none;
     border-bottom: 1px solid var(--color3);
@@ -103,6 +115,87 @@
 
 }
 
+.input-contact img {
+    display: flex;
+    margin: 0 auto;
+}
+
+#segundaimagen {
+    width: 100%;
+}
+
+.input-radio {
+    display: block;
+    margin-top: 25px;
+}
+
+.flex-item{
+    display: flex;
+    width: 100%;
+}
+
+.flex-item input[type="radio"], .flex-item input[type="checkbox"]{
+height: 15px;
+width: 15px;
+margin-top: 0px;
+margin-right: 10px;
+}
+
+#otraplantaradio, #otroAdicional{
+    margin-top: 15px;
+}
+
+#labelotraplanta{
+    margin-top: 15px;
+    width: 100px;
+}
+#adicionalLabel{
+    margin-top: 15px;
+    width: 110px;
+}
+
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin: 10px auto;
+}
+
+.grid-container2{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin: 10px auto;
+}
+
+.grid-container3{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(1, 1fr);
+    margin: 10px auto;
+}
+
+.grid-container input[type="radio"], .grid-container2input[type="radio"]{
+    margin: auto;
+    height: 15px;
+    width: 15px;
+
+}
+.grid-item{
+    text-align: center;
+}
+
+
+
+.gris {
+    background-color: #8381872c;
+}
+
+
+
+
+
 .error{
     display: none;
     color: #ca0000;
@@ -110,3 +203,4 @@
     letter-spacing: 1px;
 
 }
+

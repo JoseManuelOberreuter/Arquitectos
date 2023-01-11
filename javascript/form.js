@@ -154,6 +154,68 @@ function checkUbi() {
 }
 
 
+function checkDatos(){
+    const datos = document.getElementById('datos');
+    const datosValue = datos.value;
+
+    if (datosValue !== '') {
+        datos.style.border = '2px solid green';
+    } else {
+        datos.style.border = '';
+    }
+
+}
+
+function checkTerrenos(){
+    const terreno = document.getElementById('terreno');
+    const terrenoValue = terreno.value;
+
+    if (terrenoValue !== '') {
+        terreno.style.border = '2px solid green';
+    } else {
+        terreno.style.border = '';
+    }
+}
+
+
+function checkDisposicion() {
+    const radio = document.getElementById('otraplantaradio');
+    const radioValue = radio.value;
+
+    const input = document.getElementById('otraplantatexto');
+    const inputValue = input.value;
+    const inputTrim = inputValue.trim(); 
+
+    const dispoError = document.getElementById('dispo-error');
+
+
+    if (radio.checked = true){
+
+        input.style.border = '2px solid red';
+        dispoError.style.display = 'block';
+        dispoError.innerHTML = '<b>Debes escribir una opción</b>    ';
+
+
+        if (inputTrim === '' || inputValue == null) {
+            input.style.border = '2px solid red';
+            dispoError.style.display = 'block';
+            dispoError.innerHTML = '<b>Debes escribir una opción</b>    ';
+        }
+        else {
+            dispoError.style.display = 'none';
+            input.style.border = '2px solid green';
+        } 
+    }
+    else {
+  
+        input.style.border = 'none';
+        dispoError.style.display = 'hide';
+        dispoError.innerHTML = ''
+    }
+
+}
+
+
 function checkSelect() {
     const select = document.getElementById('opciones');
     const selectValue = select.value;
@@ -175,6 +237,14 @@ function checkSelect() {
 
 }
 
+const otroAdicionalCheck = document.getElementById('otroAdicional');
+const otroAdicionalText = document.getElementById('otroAdicionalText');
+
+otroAdicionalCheck.addEventListener('onchange', function() {
+    if (otroAdicionalCheck){
+
+    }
+})
 
 
 

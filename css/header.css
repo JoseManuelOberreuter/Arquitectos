@@ -11,17 +11,18 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100px;
+    width: 50px;
     height: 100%;
     background-color: rgba(0, 0, 0, 0.0);
     transition: background 2s;
 }
-    
+
+
 
 .links {
-    
     display: block;
     margin-top: 100px;
+    width: 50px;
 
 }
 
@@ -67,13 +68,11 @@
 }
 
 
-
-
 .icons-header {
 
     display: block;
     margin-top: 80px;
-    margin-left: 35px;
+    margin-left: 10px;
 
 }
 
@@ -91,6 +90,93 @@
 }
 
 
+
+#barralateralsecundaria{
+    z-index: 998;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 50px;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.0);
+    transition: background 2s;
+
+}
+
+.linkscontact{
+
+    display: block;
+    margin-top: 50px;
+    width: 50px;
+
+}
+
+.linkscontact  button{
+    transform:rotate(90deg);
+    font-size: 20px;
+    height: auto;
+    width: 50px;
+    
+
+    text-align: center;
+    text-decoration: none;
+    letter-spacing: 3px;
+    border: none;
+    background: none;
+    color: #ffff;
+    cursor: pointer;    
+
+
+}
+
+.link-contact {
+    opacity: 0.5;
+    padding: 0 10px;
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) 50%,  rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0.2));
+    background-size:200% 10%;
+    transition: background 2s, opacity 2s;
+
+}
+
+.link-contact:hover {
+    background-position: 100% 99.9%;
+    opacity: 1;
+}
+
+.overlay{
+    position: fixed; 
+    z-index: 1;
+    top: 20px;
+    right: -100%;
+    width: 30%;
+    height: 80%;
+    background-color: var(--color5);
+    color: #fff;
+    display: block;
+    text-align: right;
+    transition: right 1s;
+}
+
+.overlay-show{
+    position: fixed; 
+    z-index: 1;
+    top: 20px;
+    right: 0;
+    width: 50%;
+    height: 80%;
+    background-color: var(--color5);
+    color: #fff;
+    display: block;
+    text-align: right;
+}
+
+.overlay-title{
+    margin: 50px 0;
+}
+
+.overlay-text{
+    margin-right: 100px;
+}
 
 
 

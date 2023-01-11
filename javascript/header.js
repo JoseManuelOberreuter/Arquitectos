@@ -1,5 +1,6 @@
 // First, we need to get a reference to the div element with the id 'barralateral'
 const lateralBar = document.getElementById('barralateral');
+const lateralBarSec = document.getElementById('barralateralsecundaria');
 
 // Next, we will define a function that will be called whenever the user scrolls
 function handleScroll() {
@@ -10,9 +11,11 @@ function handleScroll() {
   if (scrollPosition > 0) {
     // In this case, we can set the div's background to be partially opaque by setting its opacity property to a value between 0 and 1
     lateralBar.style.background = 'rgba(0, 0, 0, 0.9)';
+    lateralBarSec.style.background = 'rgba(0, 0, 0, 0.9)';
   } else {
     // If the scroll position is 0, it means the user is at the top of the page, so we can set the div's background to be fully transparent by setting its opacity to 0
     lateralBar.style.background = 'rgba(0, 0, 0, 0.0)';
+    lateralBarSec.style.background = 'rgba(0, 0, 0, 0.0)';
   }
 }
 
@@ -20,5 +23,48 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll);
 
 
+
+
+
+const overlay = document.getElementById('overlay');
+const openBtn = document.getElementById('openBtn');
+
+// openBtn.addEventListener("click", function(){
+
+//   if(overlay.style.right = '-100%'){
+//     overlay.style.right = '0%';
+//   } 
+
+//   else if (overlay.style.right = '0%'){
+//     overlay.style.right = '-100%'
+//   }
+// });
+
+
+
+window.addEventListener("click", function(e) {
+
+
+  if (overlay.contains(e.target)) { 
+    console.log('on the div')
+    overlay.style.right = '0%'
+  } 
+
+  else if (openBtn.contains(e.target)){
+    if(overlay.style.right = '-100%'){
+      console.log('clickn open');
+      overlay.style.right = '0%';
+    }
+    else {
+      console.log('clickn close');
+      overlay.style.right = '-100%';
+    }
+  } 
+
+  else {
+    console.log('outside the div')
+    overlay.style.right = '-100%'
+  }
+});
 
 
