@@ -237,17 +237,89 @@ function checkSelect() {
 
 }
 
-const otroAdicionalCheck = document.getElementById('otroAdicional');
-const otroAdicionalText = document.getElementById('otroAdicionalText');
 
-otroAdicionalCheck.addEventListener('onchange', function() {
-    if (otroAdicionalCheck){
+// ESPACIOS ADICIONALES
+
+var inputcheck = document.getElementById('otroAdicional');
+var inputtext = document.getElementById('otroAdicionalText');
+var adicionalError = document.getElementById('adicional-error');
+
+
+inputcheck.addEventListener('change', function(){
+    if(inputcheck.checked == true){
+        inputtext.focus();
+
+        if(!inputtext.value){
+            inputtext.style.border = "2px solid red";
+            adicionalError.style.display = 'block'
+            adicionalError.innerHTML = '<b>Debes escribir una opción</b>'
+        }
+    }
+    else{
+        inputtext.blur();
+        inputtext.style.border = 'none';
+        adicionalError.style.display = 'hide';
+        adicionalError.innerHTML = '';
 
     }
+});
+
+inputtext.addEventListener('input', function(){
+    if(inputtext.value){
+        inputtext.style.border = "2px solid green";
+        adicionalError.style.display = 'none';
+        adicionalError.innerHTML = '';
+    } else {
+        inputtext.style.border = "2px solid red";
+        adicionalError.style.display = 'block';
+        adicionalError.innerHTML = '<b>Debes escribir una opción</b>';
+    }
+});
+
+
+// ESTILO ARQUITECTONICO
+const imgContemporaneo = document.getElementById('imgContemporaneo');
+const imgAmericano = document.getElementById('imgAmericano');
+const imgRustico = document.getElementById('imgRustico');
+const imgOtra = document.getElementById('imgOtra');
+
+const radioContemporaneo = document.getElementById('contemporaneo');
+const radioAmericano = document.getElementById('Americano');
+const radioRustico = document.getElementById('Rustico');
+const radioOtro = document.getElementById('otroEstiloArquitec');
+
+radioContemporaneo.addEventListener('change', function() {
+    imgContemporaneo.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 1)';
+    imgAmericano.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 0.5)';
+    imgRustico.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 0.5)';
+    imgOtra.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 0.5)';
+})
+
+radioAmericano.addEventListener('change', function() {
+    imgContemporaneo.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 0.5)';
+    imgAmericano.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 1)';
+    imgRustico.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 0.5)';
+    imgOtra.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 0.5)';
+})
+
+radioRustico.addEventListener('change', function() {
+    imgContemporaneo.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 0.5)';
+    imgAmericano.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 0.5)';
+    imgRustico.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 1)';
+    imgOtra.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 0.5)';
+})
+
+radioOtro.addEventListener('change', function() {
+    imgContemporaneo.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 0.5)';
+    imgAmericano.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 0.5)';
+    imgRustico.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 0.5)';
+    imgOtra.style.boxShadow = '1px 1px 5px rgb(0, 0, 0, 1)';
 })
 
 
 
+
+// MENSAJE FINAL
 function checkMessage(){
     const message = document.getElementById("message");
     const messageValue = message.value;

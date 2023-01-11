@@ -510,11 +510,12 @@
                         </div>
 
                         <div class="flex-item">
-                            <input type="checkbox" name="otroAdicional" id="otroAdicional" class="input-check" onchange="document.getElementById('otroAdicionalText').focus();">
+                            <input type="checkbox" name="otroAdicional" id="otroAdicional" class="input-check" >
                             <label for="otroAdicional" id="adicionalLabel">Otra opción:</label>
-                            <input required type="text" id="otroAdicionalText" name="Otro Adicional" placeholder="Ingrese otras ideas" onfocus="document.getElementById('otroAdicionalCheck').checked = true;  document.getElementById('otroAdicionalText').style.border = '2px solid red'; document.getElementById('dispo-error').style.display = 'block'; document.getElementById('dispo-error').innerHTML = '<b> Debes escribir una opción';" onblur="document.getElementById('otraplantaradio').checked = false; document.getElementById('otraplantatexto').style.border = 'none'; document.getElementById('dispo-error').style.display = 'none'">
-                            <small class="error" id="adicional-error"></small>
+                            <input required type="text" id="otroAdicionalText" name="Otro Adicional" placeholder="Ingrese otras ideas" >
+                            
                         </div>
+                        <small class="error" id="adicional-error" style="margin-left: 110px;"></small>
 
                     </div>
 
@@ -526,33 +527,43 @@
                     <h4>Estilo arquitectónico</h4>
 
                     <div class="grid-container3">    
-                        <img src="img/contemporaneo.png" alt="contemporaneo">
-                        <img src="img/Americano.png" alt="Americano">
+
+                        <label class="grid-item" for="contemporaneo">
+                            <img src="img/contemporaneo.png" alt="contemporaneo" id="imgContemporaneo">
+                        </label>
+
+                        <label class="grid-item" for="Americano">
+                            <img src="img/Americano.png" alt="Americano" id="imgAmericano">
+                        </label>
 
                     </div>
 
                     <div class="grid-container3">
-                        <div class="flex-item">
-                            <input class="grid-item" type="radio" name="estilo" id="contemporaneo"> 
+                        <div class="flex-item centroRadios" >
+                            <input class="grid-item " type="radio" name="estilo" id="contemporaneo"> 
                             <label class="grid-item" for="contemporaneo">Contemporáneo</label>
                         </div> 
-                        <div class="flex-item">
+                        <div class="flex-item centroRadios">
                             <input class="grid-item" type="radio" name="estilo" id="Americano"> 
                             <label class="grid-item" for="Americano">Americano</label>
                         </div> 
                     </div>
 
-                    <div class="grid-container3">    
-                        <img src="img/rustico.png" alt="rustico">
-                        <img src="img/otra.png" alt="otra">
+                    <div class="grid-container3">
+                        <label class="grid-item" for="Rustico">
+                            <img src="img/rustico.png" alt="rustico" id="imgRustico">
+                        </label>
+                        <label class="grid-item" for="otroEstiloArquitec">
+                            <img src="img/otra.png" alt="otra" id="imgOtra">
+                        </label>
                     </div>
 
                     <div class="grid-container3">
-                        <div class="flex-item">
+                        <div class="flex-item centroRadios">
                             <input class="grid-item" type="radio" name="estilo" id="Rustico"> 
                             <label class="grid-item" for="Rustico">Rústico</label>
                         </div> 
-                        <div class="flex-item">
+                        <div class="flex-item centroRadios">
                             <input class="grid-item" type="radio" name="estilo" id="otroEstiloArquitec"> 
                             <label class="grid-item" for="otroEstiloArquitec">Otro</label>
                         </div> 

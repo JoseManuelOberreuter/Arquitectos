@@ -43,7 +43,7 @@
     cursor: pointer;
 
     color: #ffff;
-    background-color: var(--color3);
+    background-color: var(--color5);
     border: none;
 
     background-image: linear-gradient(rgb(0, 0, 0,0), rgb(0, 0, 0, 0));
@@ -108,7 +108,7 @@
     padding: 5px 0px;
     padding-left: 5px;
 
-    color: #fff;
+    color: black;
     background: none;
     border: 1px solid var(--color3);
 
@@ -139,6 +139,11 @@ height: 15px;
 width: 15px;
 margin-top: 0px;
 margin-right: 10px;
+}
+
+.centroRadios{
+    align-items: center;
+    justify-content: center;
 }
 
 #otraplantaradio, #otroAdicional{
@@ -174,6 +179,19 @@ margin-right: 10px;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(1, 1fr);
     margin: 10px auto;
+}
+
+.grid-container3 img {
+    height: 150px;
+    width: 200px;
+    padding: 10px;
+    box-shadow: 1px 1px 5px rgb(0, 0, 0, 0.5);
+    cursor: pointer;
+    transition: box-shadow 0.1s;
+}
+
+.grid-container3 img:hover {
+    box-shadow: 1px 1px 5px rgb(0, 0, 0, 1);
 }
 
 .grid-container input[type="radio"], .grid-container2input[type="radio"]{
