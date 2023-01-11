@@ -17,6 +17,15 @@ body{
 
 }
 
+h1, h2, h3, h4 ,h5 {
+    font-family: 'Roboto', sans-serif;
+
+}
+
+p, a, button, div, input, label  {
+    font-family: 'Rajdhani', sans-serif;
+}
+
 
 
 main {
