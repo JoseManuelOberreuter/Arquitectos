@@ -12,6 +12,8 @@
     <link rel="stylesheet" href="css/tabla.css">
     <link rel="stylesheet" href="css/galeria.css">
     <link rel="stylesheet" href="css/footer.css">
+    <link rel="stylesheet" href="css/hamburger.css">
+
 
     <!-- FADE -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -45,6 +47,37 @@
         <div class="linkscontact">
             <button id="openBtn"><span class="link-contact">Contacto</span></button> 
         </div> 
+    </div>
+
+    <!-- BOTOTN HAMBURGESA -->
+    <label for="hamburger-btn" class="lbl-hamburger">
+        <div class="menu-button">
+            <input type="checkbox" id="hamburger-btn">
+            <span id="spn1" ></span>
+            <span id="spn2"></span>
+            <span id="spn3"></span>
+        </div>
+    </label>
+
+
+    <!-- MENU HAMBURGESA ESCONDIDO -->
+    <div id="hidden-hamburger">
+
+        <h1>MENU</h1>
+
+        <div class="hamburger-links">
+            <a href="/index.html" >Inicio</a>
+            <a href="/contact.html">Presupuesto</a>
+            <a href="/portafolios.html" >Portafolios</a>
+        </div> 
+
+        <div class="hamburger-icon">
+            <a href="#" target="_blank"><img src="ico/whatsapp.ico" alt=""></a> 
+            <a href="https://www.instagram.com/masking.arquitectos/" target="_blank"><img src="ico/instagram.ico" alt=""></a> 
+            <a href="#" target="_blank"><img src="ico/pinterest.png" alt=""></a> 
+        </div>
+
+
     </div>
 
 
@@ -161,6 +194,7 @@
         <!-- JAVASCRIPT -->
         <script src="javascript/header.js"></script>
         <script src="javascript/portafolios.js"></script>
+        <script src="javascript/hamburger.js"></script>
         
         <!-- FADE JAVASCRIPT -->
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>

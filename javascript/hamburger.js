@@ -1,14 +1,16 @@
-const menuButton = document.querySelector(".menu-button");
-const lines = document.querySelectorAll(".menu-button__line");
+var hamburgerBtn = document.getElementById("hamburger-btn");
+var hiddenHamburger = document.getElementById("hidden-hamburger");
 
-const lineaTop = document.getElementById('barra-arriba');
-const lineaMid = document.getElementById('barra-media');
-const lineaBot = document.getElementById('barra-baja');
+hamburgerBtn.addEventListener("click", expandHamburger);
 
+function expandHamburger() {
+  if(hamburgerBtn.checked === true){
+    hiddenHamburger.style.bottom = "0";
+    hiddenHamburger.style.opacity = "1";
+    hiddenHamburger.style.display = "flex";
 
-menuButton.addEventListener("click", () => {
-  lineaTop.classList.toggle('barraTop');
-  lineaBot.classList.toggle('barraBot');
-  lineaMid.style.display = 'none';
-  
-});
+  }else{
+    hiddenHamburger.style.bottom = "-100%";
+    hiddenHamburger.style.opacity = "0";
+  }
+}
