@@ -1,6 +1,10 @@
-// First, we need to get a reference to the div element with the id 'barralateral'
+
+let links = document.querySelectorAll('.links a');
+let links2 = document.querySelectorAll('.linkscontact button');
+
 const lateralBar = document.getElementById('barralateral');
 const lateralBarSec = document.getElementById('barralateralsecundaria');
+
 
 // Next, we will define a function that will be called whenever the user scrolls
 function handleScroll() {
@@ -12,11 +16,27 @@ function handleScroll() {
     // In this case, we can set the div's background to be partially opaque by setting its opacity property to a value between 0 and 1
     lateralBar.style.background = '#DFD3C3';
     lateralBarSec.style.background = '#DFD3C3';
+
+
+    for (let i = 0; i < links.length; i++) {
+        links[i].style.color = "#000";
+    }  
+    for (let i = 0; i < links2.length; i++) {
+        links2[i].style.color = "#000";
+    }  
+
   } else {
     // If the scroll position is 0, it means the user is at the top of the page, so we can set the div's background to be fully transparent by setting its opacity to 0
     lateralBar.style.background = 'rgba(0, 0, 0, 0.0)';
     lateralBarSec.style.background = 'rgba(0, 0, 0, 0.0)';
-  }
+
+    for (let i = 0; i < links.length; i++) {
+        links[i].style.color = "#FFF";
+    }  
+    for (let i = 0; i < links2.length; i++) {
+        links2[i].style.color = "#FFF";
+    }  
+  } 
 }
 
 // Finally, we will use the window.addEventListener() method to attach the 'scroll' event to the window object, and specify our handleScroll function as the event handler

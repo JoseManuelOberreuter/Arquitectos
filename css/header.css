@@ -1,10 +1,3 @@
-:root{
-    --color1: #1b1517;
-    --color2: #535749;
-    --color3: #2a3036;
-    --color4: #574f5d;
-    --color5: #838187;
-}
 
 #barralateral {
     z-index: 2;
@@ -36,16 +29,16 @@
     text-decoration: none;
     letter-spacing: 3px;
 
-    color: #ffff;
+    color: #000;
     cursor: pointer;
 
-
+    transition: color 1s;
 }
 
 .link-disabled {
     opacity: 0.5;
     padding: 0 10px;
-    background: linear-gradient(to right,rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) 50%,  rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0.2));
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) 50%,  rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, 0.5));
     background-size:200% 10%;
     transition: background 2s, opacity 2s;
 }
@@ -58,7 +51,7 @@
 
 .link-activated{
     padding: 0 10px;
-    background: rgba(255, 255, 255, .2);
+    background: rgba(255, 255, 255, .5);
     opacity: 1;
 }
 
@@ -104,14 +97,13 @@
 }
 
 .linkscontact{
-
     display: block;
     margin-top: 50px;
     width: 50px;
 
 }
 
-.linkscontact  button{
+.linkscontact button{
     transform:rotate(90deg);
     font-size: 20px;
     height: auto;
@@ -123,16 +115,16 @@
     letter-spacing: 3px;
     border: none;
     background: none;
-    color: #ffff;
+    color: #000;
     cursor: pointer;    
 
-
+    transition: color 1s;
 }
 
 .link-contact {
     opacity: 0.5;
     padding: 0 10px;
-    background: linear-gradient(to right,rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) 50%,  rgba(255, 255, 255, .2) 50%, rgba(255, 255, 255, 0.2));
+    background: linear-gradient(to right,rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0) 50%,  rgba(255, 255, 255, .5) 50%, rgba(255, 255, 255, 0.5));
     background-size:200% 10%;
     transition: background 2s, opacity 2s;
 
@@ -145,7 +137,7 @@
 
 .overlay{
     position: fixed; 
-    z-index: 1;
+    z-index: 100;
     top: 20px;
     right: -100%;
     width: 30%;
