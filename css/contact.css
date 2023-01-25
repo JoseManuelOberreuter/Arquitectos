@@ -66,7 +66,6 @@
 
 .input-contact input {
 
-    width: 100%;
     margin: 10px 0px;
     padding: 5px 0px;
     padding-left: 5px;
@@ -76,6 +75,17 @@
     border: none;
     border-bottom: 1px solid var(--color3);
 }
+.input-contact [type="checkbox"]{
+    width: 25px
+}
+.input-contact [type="text"], .input-contact [type="email"],.input-contact [type="tel"] {
+    width: 100%;
+
+}
+
+
+
+
 
 .input-contact select {
     width: 100%;
@@ -134,11 +144,11 @@
     width: 100%;
 }
 
-.flex-item input[type="radio"], .flex-item input[type="checkbox"]{
-height: 15px;
-width: 15px;
-margin-top: 0px;
-margin-right: 10px;
+.flex-item input[type="checkbox"]{
+    height: 20px;
+    width: 20px;
+    margin-top: 0px;
+    margin-right: 10px;
 }
 
 .centroRadios{
@@ -167,12 +177,24 @@ margin-right: 10px;
     margin: 10px auto;
 }
 
+.grid-container [type="checkbox"]{
+    margin: 0 auto;
+    width: 20px;
+}
+
+
 .grid-container2{
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-template-rows: repeat(1, 1fr);
-    margin: 10px auto;
+    margin: 0 auto;
+    text-align: center;
+    place-items: center;
+    justify-content: center;
 }
+
+
+
 
 .grid-container3{
     display: grid;
@@ -194,10 +216,10 @@ margin-right: 10px;
     box-shadow: 1px 1px 5px rgb(0, 0, 0, 1);
 }
 
-.grid-container input[type="radio"], .grid-container2input[type="radio"]{
-    margin: auto;
-    height: 15px;
-    width: 15px;
+.grid-container2 input[type="checkbox"]{
+    margin: 10px auto;
+    height: 20px;
+    width: 20px;
 
 }
 .grid-item{
@@ -209,6 +231,7 @@ margin-right: 10px;
 .gris {
     background-color: #8381872c;
 }
+
 
 
 

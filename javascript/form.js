@@ -18,7 +18,7 @@ function checkName(){
     }
 }
 
-
+// CHEKEO DE EMAIL 
 function checkEmail(){
     const email = document.getElementById("inputemail");
     const emailValue = email.value;
@@ -65,13 +65,7 @@ function checkEmail(){
 
 
 
-
-
-
-
-
-
-
+// CHEKEO DE EMAIL DE CONFIRMACION
 function checkEmailConf(){
 
     const email = document.getElementById("inputemail");
@@ -120,6 +114,8 @@ function checkEmailConf(){
 }
 
 
+
+// CHEKEO DE TELEFONO CELULAR
 function checkPhone() {
     const phone = document.getElementById("phone");
     const phoneValue = phone.value;
@@ -136,7 +132,7 @@ function checkPhone() {
     }
 }
 
-
+// CHEKEANDO UBICACIÓN
 function checkUbi() {
     const ubi = document.getElementById("ubicacion");
     const ubiValue = ubi.value;
@@ -153,7 +149,7 @@ function checkUbi() {
     }
 }
 
-
+// CHEKEANDO DATOS
 function checkDatos(){
     const datos = document.getElementById('datos');
     const datosValue = datos.value;
@@ -166,6 +162,7 @@ function checkDatos(){
 
 }
 
+// CHEKEANDO TERRENO
 function checkTerrenos(){
     const terreno = document.getElementById('terreno');
     const terrenoValue = terreno.value;
@@ -177,42 +174,232 @@ function checkTerrenos(){
     }
 }
 
+// VIVIENDA IDEAL CHECKBOX A RADIO
 
-function checkDisposicion() {
-    const radio = document.getElementById('otraplantaradio');
-    const radioValue = radio.value;
+var checkboxes1 = document.querySelectorAll('#checkboxToRadio1 input[type="checkbox"]');
 
-    const input = document.getElementById('otraplantatexto');
-    const inputValue = input.value;
-    const inputTrim = inputValue.trim(); 
+for (var i = 0; i < checkboxes1.length; i++) {
+    checkboxes1[i].addEventListener('change', function() {
+        var checkbox = this;
 
-    const dispoError = document.getElementById('dispo-error');
-
-
-    if (radio.checked = true){
-
-        input.style.border = '2px solid red';
-        dispoError.style.display = 'block';
-        dispoError.innerHTML = '<b>Debes escribir una opción</b>    ';
+        // Desmarcar todos los checkboxes menos el seleccionado
+        for (var j = 0; j < checkboxes1.length; j++) {
+            if (checkboxes1[j] !== checkbox) {
+                checkboxes1[j].checked = false;
+            }
+        }   
+    });
+}
 
 
-        if (inputTrim === '' || inputValue == null) {
-            input.style.border = '2px solid red';
-            dispoError.style.display = 'block';
-            dispoError.innerHTML = '<b>Debes escribir una opción</b>    ';
+// DISPOSICION CHECKEBOX A RADIO
+var checkboxes2 = document.querySelectorAll('#checkboxToRadio2 input[type="checkbox"]');
+
+var inputcheck1 = document.getElementById('otroAdicional1');
+var inputtext1 = document.getElementById('otroAdicionalText1');
+var adicionalError1 = document.getElementById('adicional-error1');
+
+for (var i = 0; i < checkboxes2.length; i++) {
+    checkboxes2[i].addEventListener('change', function() {
+        var checkbox = this;
+        // Desmarcar todos los checkboxes menos el seleccionado
+        for (var j = 0; j < checkboxes2.length; j++) {
+            if (checkboxes2[j] !== checkbox) {
+                checkboxes2[j].checked = false;
+
+            }
         }
-        else {
-            dispoError.style.display = 'none';
-            input.style.border = '2px solid green';
-        } 
-    }
-    else {
-  
-        input.style.border = 'none';
-        dispoError.style.display = 'hide';
-        dispoError.innerHTML = ''
-    }
 
+        if(inputcheck1.checked == true){
+            inputtext1.focus();
+            if(inputtext1.value.length == 0){
+                inputtext1.style.border = "2px solid red";
+                adicionalError1.style.display = 'block';
+                adicionalError1.innerHTML = '<b>Debes escribir una opción</b>';
+            }
+    
+            else{
+                inputtext1.style.border = "1px solid var(--color3)";
+                adicionalError1.style.display = 'none';
+                adicionalError1.innerHTML = '';
+            }
+        }
+        else{
+            inputtext1.blur();
+            inputtext1.style.border = 'none';
+            adicionalError1.style.display = 'none';
+            adicionalError1.innerHTML = '';
+        }
+
+
+    });
+}
+
+
+// COCINA CHECKEBOX A RADIO
+var checkboxes3 = document.querySelectorAll('#checkboxToRadio3 input[type="checkbox"]');
+
+
+
+for (var i = 0; i < checkboxes3.length; i++) {
+    checkboxes3[i].addEventListener('change', function() {
+        var checkbox = this;
+        // Desmarcar todos los checkboxes menos el seleccionado
+        for (var j = 0; j < checkboxes3.length; j++) {
+            if (checkboxes3[j] !== checkbox) {
+                checkboxes3[j].checked = false;
+                
+            }
+        }
+    
+    });
+}
+
+
+
+
+
+// LIVING CHECKEBOX A RADIO
+var checkboxes4 = document.querySelectorAll('#checkboxToRadio4 input[type="checkbox"]');
+
+
+
+for (var i = 0; i < checkboxes4.length; i++) {
+    checkboxes4[i].addEventListener('change', function() {
+        var checkbox = this;
+        // Desmarcar todos los checkboxes menos el seleccionado
+        for (var j = 0; j < checkboxes4.length; j++) {
+            if (checkboxes4[j] !== checkbox) {
+                checkboxes4[j].checked = false;
+                
+            }
+        }
+    
+    });
+}
+
+
+// COMEDOR CHECKEBOX A RADIO
+var checkboxes5 = document.querySelectorAll('#checkboxToRadio5 input[type="checkbox"]');
+
+
+
+for (var i = 0; i < checkboxes5.length; i++) {
+    checkboxes5[i].addEventListener('change', function() {
+        var checkbox = this;
+        // Desmarcar todos los checkboxes menos el seleccionado
+        for (var j = 0; j < checkboxes5.length; j++) {
+            if (checkboxes5[j] !== checkbox) {
+                checkboxes5[j].checked = false;
+                
+            }
+        }
+    
+    });
+}
+
+
+
+
+// TERRAZA CHECKEBOX A RADIO
+var checkboxes6 = document.querySelectorAll('#checkboxToRadio6 input[type="checkbox"]');
+
+
+
+for (var i = 0; i < checkboxes6.length; i++) {
+    checkboxes6[i].addEventListener('change', function() {
+        var checkbox = this;
+        // Desmarcar todos los checkboxes menos el seleccionado
+        for (var j = 0; j < checkboxes6.length; j++) {
+            if (checkboxes6[j] !== checkbox) {
+                checkboxes6[j].checked = false;
+                
+            }
+        }
+    
+    });
+}
+
+
+// COCHERA CHECKEBOX A RADIO
+var checkboxes7 = document.querySelectorAll('#checkboxToRadio7 input[type="checkbox"]');
+
+
+
+for (var i = 0; i < checkboxes7.length; i++) {
+    checkboxes7[i].addEventListener('change', function() {
+        var checkbox = this;
+        // Desmarcar todos los checkboxes menos el seleccionado
+        for (var j = 0; j < checkboxes7.length; j++) {
+            if (checkboxes7[j] !== checkbox) {
+                checkboxes7[j].checked = false;
+                
+            }
+        }
+    
+    });
+}
+
+
+// DORMITORIOS CHECKEBOX A RADIO
+var checkboxes8 = document.querySelectorAll('.checkboxToRadio8 input[type="checkbox"]');
+
+
+
+for (var i = 0; i < checkboxes8.length; i++) {
+    checkboxes8[i].addEventListener('change', function() {
+        var checkbox = this;
+        // Desmarcar todos los checkboxes menos el seleccionado
+        for (var j = 0; j < checkboxes8.length; j++) {
+            if (checkboxes8[j] !== checkbox) {
+                checkboxes8[j].checked = false;
+                
+            }
+        }
+    
+    });
+}
+
+
+
+// BAÑOS CHECKEBOX A RADIO
+var checkboxes9 = document.querySelectorAll('.checkboxToRadio9 input[type="checkbox"]');
+
+
+
+for (var i = 0; i < checkboxes9.length; i++) {
+    checkboxes9[i].addEventListener('change', function() {
+        var checkbox = this;
+        // Desmarcar todos los checkboxes menos el seleccionado
+        for (var j = 0; j < checkboxes9.length; j++) {
+            if (checkboxes9[j] !== checkbox) {
+                checkboxes9[j].checked = false;
+                
+            }
+        }
+    
+    });
+}
+
+
+
+// ESTILO ARQUITECTONICO CHECKEBOX A RADIO
+var checkboxes10 = document.querySelectorAll('.checkboxToRadio10 input[type="checkbox"]');
+
+
+
+for (var i = 0; i < checkboxes10.length; i++) {
+    checkboxes10[i].addEventListener('change', function() {
+        var checkbox = this;
+        // Desmarcar todos los checkboxes menos el seleccionado
+        for (var j = 0; j < checkboxes10.length; j++) {
+            if (checkboxes10[j] !== checkbox) {
+                checkboxes10[j].checked = false;
+                
+            }
+        }
+    
+    });
 }
 
 
@@ -263,6 +450,10 @@ inputcheck.addEventListener('change', function(){
 
     }
 });
+
+
+
+
 
 inputtext.addEventListener('input', function(){
     if(inputtext.value){
@@ -327,11 +518,10 @@ function checkMessage(){
     const errormessage = document.getElementById('errorMessage');
 
     if (messageTrim === '' || messageValue == null){
-        message.style.border = '2px solid red'
-        errormessage.style.display = 'block';
-        errormessage.innerHTML = '<b>Debes escribir un mensaje</b>'
+        message.style.border = '';
+        errormessage.innerHTML = ''
     } else {
         message.style.border = '2px solid green';
         errormessage.style.display = 'none'
-    }
+    }   
 }

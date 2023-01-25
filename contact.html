@@ -108,20 +108,20 @@
                 <!-- EMAIL -->
                 <div class="input-contact">
                     <label for="email" class="text-dark"><h4>Correo electronico:</h4></label>
-                    <input required type="email" id="inputemail" name="Mail" placeholder="Ingrese su correo electronico" onkeyup="checkEmail()">
+                    <input required type="email" id="inputemail" name="Email" placeholder="Ingrese su correo electronico" onkeyup="checkEmail()">
                     <small class="error" id="errorEmail"></small>
 
                     <div class="margin"></div>
 
                     <label for="emailconf" class="text-dark"><h4>Confirmacion de correo electronico:</h4></label>
-                    <input required type="email" id="emailconf" name="Mail de Confirmación" placeholder="Vuelva a escribir su correo electronico" onkeyup="checkEmailConf()">
+                    <input required type="email" id="emailconf" name="Email de Confirmación" placeholder="Vuelva a escribir su correo electronico" onkeyup="checkEmailConf()">
                     <small class="error" id="errorEmailConf"></small>
                 </div>
 
                 <!-- NOMBRE -->
                 <div class="input-contact">
                     <label for="name"><h4>Nombre completo:</h4></label>
-                    <input autofocus required type="text" id="inputname" name="Nombre" maxlength="100" placeholder="Ingrese su nombre" onkeyup="checkName()">
+                    <input autofocus required type="text" id="inputname" name="Nombre completo" maxlength="100" placeholder="Ingrese su nombre" onkeyup="checkName()">
                     <small class="error" id="errorName"></small>
                 </div>
 
@@ -129,14 +129,14 @@
                 <!-- TELEFONO -->
                 <div class="input-contact">
                     <label for="phone" class="text-dark"><h4>Teléfono de contacto:</h4></label>
-                    <input required type="tel" id="phone" name="Telefono" placeholder="Ingrese el número" onkeyup="checkPhone()" >
+                    <input required type="tel" id="phone" name="Telefono de contacto" placeholder="Ingrese el número" onkeyup="checkPhone()" >
                     <small class="error" id="errorPhone"></small>
                 </div>
 
                 <!-- UbICACION -->
                 <div class="input-contact">
                     <label for="ubicacion" class="text-dark"><h4>¿Donde queda el proyecto?</h4></label>
-                    <input required type="text" id="ubicacion" name="Ubicacion" placeholder="Ingrese la dirección, comuna y region" onkeyup="checkUbi()">
+                    <input required type="text" id="ubicacion" name="Ubicacion del proyecto" placeholder="Ingrese la dirección, comuna y region" onkeyup="checkUbi()">
                     <small class="error" id="errorUbi"></small>
                 </div>
 
@@ -199,7 +199,7 @@
                         Si dispones de uno actualmente, o vas a adquirirlo próximamente: ¿Dónde se encuentra ubicado tu terreno? ¿Qué características particulares tiene? (Ejemplo: Terreno en esquina, irregular, con pendiente, entre medianeras, etc.)
                         <br><br>    
                     </label>
-                    <input required type="text" id="datos" name="Datos" placeholder="Proporciona todos los datos que puedas" onkeyup="checkDatos()">
+                    <input required type="text" id="datos" name="Datos del terreno" placeholder="Proporciona todos los datos que puedas" onkeyup="checkDatos()">
                 </div>
                 
 
@@ -213,7 +213,7 @@
                         <img id="primeraimagen" src="img/terreno.png" alt="terreno">    
                     </label>
                     <div class="margin"></div>
-                    <input required type="text" id="terreno" name="Terreno" placeholder="Ingrese medidas del lote / terreno" onkeyup="checkTerrenos()">
+                    <input required type="text" id="terreno" name="Medidas de lote/terreno" placeholder="Ingrese medidas del lote / terreno" onkeyup="checkTerrenos()">
                 </div>
                 
                 
@@ -224,9 +224,9 @@
 
                     <div class="margin"></div>
 
-                    <div class="grid-container">
+                    <div class="grid-container" >
                         <div class="grid-item"></div>
-                        <label class="grid-item" for="viviendaideal1">- de 150</label>
+                        <label class="grid-item" for="viviendaideal1" >- de 150</label>
                         <label class="grid-item" for="viviendaideal2">150</label>
                         <label class="grid-item" for="viviendaideal3">200</label>
                         <label class="grid-item" for="viviendaideal4">250</label>
@@ -234,14 +234,14 @@
                         <label class="grid-item" for="viviendaideal6">+ de 300</label>
                     </div>
                     
-                    <div class="grid-container gris">
+                    <div class="grid-container gris" id="checkboxToRadio1">
                         <p class="grid-item">Metros cuadrados estimados</p>
-                        <input class="grid-item back-grey" type="radio" name="vivienda ideal de - de 150m2" id="viviendaideal1">
-                        <input class="grid-item" type="radio" name="Vivienda ideal de 150m2 " id="viviendaideal2">
-                        <input class="grid-item" type="radio" name="Vivienda ideal de 200m2" id="viviendaideal3">
-                        <input class="grid-item" type="radio" name="Vivienda ideal de 250m2" id="viviendaideal4">
-                        <input class="grid-item" type="radio" name="Vivienda ideal de 300m2" id="viviendaideal5">
-                        <input class="grid-item" type="radio" name="Vivienda ideal de + de 300m2" id="viviendaideal6">
+                        <input class="grid-item" type="checkbox" name="vivienda ideal de - de 150m2" id="viviendaideal1" >
+                        <input class="grid-item" type="checkbox" name="Vivienda ideal de 150m2 " id="viviendaideal2">
+                        <input class="grid-item" type="checkbox" name="Vivienda ideal de 200m2" id="viviendaideal3">
+                        <input class="grid-item" type="checkbox" name="Vivienda ideal de 250m2" id="viviendaideal4">
+                        <input class="grid-item" type="checkbox" name="Vivienda ideal de 300m2" id="viviendaideal5">
+                        <input class="grid-item" type="checkbox" name="Vivienda ideal de + de 300m2" id="viviendaideal6">
                     </div>
                     
 
@@ -254,27 +254,29 @@
                     <br>
                     <p>¿Cuántos niveles te gustaría desarrollar en tu casa?</p>
                     <img id="segundaimagen" src="img/casanivel.png" alt="terreno">
-                    <div class="input-radio">
+                    <div id="checkboxToRadio2">
                         <div class="flex-item">
-                            <input type="radio" name="Sólo 1 planta" id="1planta" class="input-check"> 
+                            <input type="checkbox" name="Sólo 1 planta" id="1planta" class="input-check"> 
                             <label for="1planta">1 planta</label>     
                         </div>
 
                         <div class="flex-item">
-                            <input type="radio" name="En 2 plantas" id="2planta" class="input-check">
+                            <input type="checkbox" name="En 2 plantas" id="2planta" class="input-check">
                             <label for="2planta">2 plantas</label> 
                         </div>
 
                         <div class="flex-item">
-                            <input type="radio" name="En 3 plantas" id="3planta" class="input-check">  
+                            <input type="checkbox" name="En 3 plantas" id="3planta" class="input-check">  
                             <label for="3planta">En 2 plantas + Planta subsuelo</label>
                         </div>
+
                         <div class="flex-item">
-                            <input type="radio" name="Otra idea" id="otraplantaradio" class="input-check" onchange="document.getElementById('otraplantatexto').focus();"> 
-                            <label for="otraplantaradio" id="labelotraplanta">Otra idea:</label>
-                            <input required type="text" id="otraplantatexto" name="Otra idea" placeholder="Ingrese otras ideas" onkeyup="checkDisposicion()"  onfocus="document.getElementById('otraplantaradio').checked = true;  document.getElementById('otraplantatexto').style.border = '2px solid red'; document.getElementById('dispo-error').style.display = 'block'; document.getElementById('dispo-error').innerHTML = '<b> Debes escribir una opción';" onblur="document.getElementById('otraplantaradio').checked = false; document.getElementById('otraplantatexto').style.border = 'none'; document.getElementById('dispo-error').style.display = 'none'" >
+                            <input type="checkbox" id="otroAdicional1" class="input-check" style="width: 25px; margin-top: 15px;">
+                            <label for="otroAdicional1" id="adicionalLabel">Otra opción:</label>
+                            <input type="text" id="otroAdicionalText1" name="Espacios adicionales" placeholder="Ingrese otras ideas" >
+                            
                         </div>
-                        <small class="error" id="dispo-error" style="margin-left: 100px;"></small>
+                        <small class="error" id="adicional-error1" style="margin-left: 100px;"></small>
                     </div>
                  </div>
 
@@ -286,20 +288,20 @@
                     <p>Las medidas son estimadas/aproximadas, pueden variar según la necesidad de cada cliente</p>
                     <img src="img/cocina.png" alt="cocina">
 
-                    <div class="input-radio">
+                    <div class="input-radio" id="checkboxToRadio3">
 
                         <div class="flex-item">
-                            <input type="radio" name="Cocina Mínima (5m2)" id="cocina1" class="input-check"> 
+                            <input type="checkbox" name="Cocina Mínima (5m2)" id="cocina1" class="input-check"> 
                             <label for="cocina1">Mínima (5m2)</label>     
                         </div>
 
                         <div class="flex-item">
-                            <input type="radio" name="Cocina Estándar (8m2)" id="cocina2" class="input-check">
+                            <input type="checkbox" name="Cocina Estándar (8m2)" id="cocina2" class="input-check">
                             <label for="cocina2">Estándar (8m2)</label> 
                         </div>
 
                         <div class="flex-item">
-                            <input type="radio" name="Cocina Grande (15m2)" id="cocina3" class="input-check">  
+                            <input type="checkbox" name="Cocina Grande (15m2)" id="cocina3" class="input-check">  
                             <label for="cocina3">Grande (15m2)</label>
                         </div>
                     </div>
@@ -313,19 +315,19 @@
                     <p>Las medidas son estimadas/aproximadas, pueden variar según la necesidad de cada cliente</p>
                     <img src="img/living.png" alt="Living">
 
-                    <div class="input-radio">
+                    <div class="input-radio" id="checkboxToRadio4">
                         <div class="flex-item">
-                            <input type="radio" name="Living Mínima (12m2)" id="living1" class="input-check"> 
+                            <input type="checkbox" name="Living Mínima (12m2)" id="living1" class="input-check"> 
                             <label for="living1">Mínima (12m2)</label>     
                         </div>
 
                         <div class="flex-item">
-                            <input type="radio" name="Living Estándar (25m2)" id="living2" class="input-check">
+                            <input type="checkbox" name="Living Estándar (25m2)" id="living2" class="input-check">
                             <label for="living2">Estándar (25m2)</label> 
                         </div>
 
                         <div class="flex-item">
-                            <input type="radio" name="Living Grande (45m2)" id="living3" class="input-check">  
+                            <input type="checkbox" name="Living Grande (45m2)" id="living3" class="input-check">  
                             <label for="living3">Grande (45m2)</label>
                         </div>
                     </div>
@@ -339,19 +341,19 @@
                     <p>Las medidas son estimadas/aproximadas, pueden variar según la necesidad de cada cliente</p>
                     <img src="img/comedor.png" alt="Comedor">
                 
-                    <div class="input-radio">
+                    <div class="input-radio" id="checkboxToRadio5">
                         <div class="flex-item">
-                            <input type="radio" name="Comedor Mínimo (12m2)" id="comedor1" class="input-check"> 
+                            <input type="checkbox" name="Comedor Mínimo (12m2)" id="comedor1" class="input-check"> 
                             <label for="comedor1">Mínimo (12m2)</label>     
                         </div>
 
                         <div class="flex-item">
-                            <input type="radio" name="Comedor Estándar (25m2)" id="comedor2" class="input-check">
+                            <input type="checkbox" name="Comedor Estándar (25m2)" id="comedor2" class="input-check">
                             <label for="comedor2">Estándar (25m2)</label> 
                         </div>
 
                         <div class="flex-item">
-                            <input type="radio" name="Comedor Grande (35m2)" id="comedor3" class="input-check">  
+                            <input type="checkbox" name="Comedor Grande (35m2)" id="comedor3" class="input-check">  
                             <label for="comedor3">Grande (35m2)</label>
                         </div>
                     </div>
@@ -365,19 +367,19 @@
                     <p>Las medidas son estimadas/aproximadas, pueden variar según la necesidad de cada cliente</p>
                     <img src="img/terraza.png" alt="terraza">
                 
-                    <div class="input-radio">
+                    <div class="input-radio" id="checkboxToRadio6">
                         <div class="flex-item">
-                            <input type="radio" name="Terraza Mínimo (15m2)" id="terraza1" class="input-check"> 
+                            <input type="checkbox" name="Terraza Mínimo (15m2)" id="terraza1" class="input-check"> 
                             <label for="terraza1">Mínimo (15m2)</label>     
                         </div>
 
                         <div class="flex-item">
-                            <input type="radio" name="Terraza Estándar (30m2)" id="terraza2" class="input-check">
+                            <input type="checkbox" name="Terraza Estándar (30m2)" id="terraza2" class="input-check">
                             <label for="terraza2">Estándar (30m2)</label> 
                         </div>
 
                         <div class="flex-item">
-                            <input type="radio" name="Terraza Grande (+50m2)" id="terraza3" class="input-check">  
+                            <input type="checkbox" name="Terraza Grande (+50m2)" id="terraza3" class="input-check">  
                             <label for="terraza3">Grande (+50m2)</label>
                         </div>
                     </div>
@@ -392,19 +394,19 @@
                     <p>Las medidas son estimadas/aproximadas, pueden variar según la necesidad de cada cliente</p>
                     <img src="img/cochera.png" alt="cochera">
                 
-                    <div class="input-radio">
+                    <div class="input-radio" id="checkboxToRadio7">
                         <div class="flex-item">
-                            <input type="radio" name="Cochera 1 Automóvil" id="cochera1" class="input-check"> 
+                            <input type="checkbox" name="Cochera 1 Automóvil" id="cochera1" class="input-check"> 
                             <label for="cochera1">1 Automóvil</label>     
                         </div>
 
                         <div class="flex-item">
-                            <input type="radio" name="Cochera 2 Automóvil" id="cochera2" class="input-check">
+                            <input type="checkbox" name="Cochera 2 Automóvil" id="cochera2" class="input-check">
                             <label for="cochera2">2 Automóvil</label> 
                         </div>
 
                         <div class="flex-item">
-                            <input type="radio" name="Cochera + de 2 Automóviles" id="cochera3" class="input-check">  
+                            <input type="checkbox" name="Cochera + de 2 Automóviles" id="cochera3" class="input-check">  
                             <label for="cochera3">+ de 2 Automóviles</label>
                         </div>
                     </div>
@@ -420,7 +422,7 @@
                     <p>Las medidas son estimadas/aproximadas, pueden variar según la necesidad de cada cliente</p>
                     <img src="img/dormitorio.png" alt="Dormitorios">
                 
-                    <div class="grid-container2">
+                    <div class="grid-container2 ">
                         <div class="grid-item"></div>
                         <p class="grid-item">1</p>
                         <p class="grid-item">2</p>
@@ -428,28 +430,28 @@
                         <p class="grid-item">+ de 3</p>
                     </div>
 
-                    <div class="grid-container2 gris">
+                    <div class="grid-container2 gris checkboxToRadio8">
                         <p class="grid-item">Mínimo (7m2)</p>
-                        <input class="grid-item" type="radio" name="1 dormitorio de tamaño Mínimo (7m2)" >
-                        <input class="grid-item" type="radio" name="2 dormitorio de tamaño Mínimo (7m2)" >
-                        <input class="grid-item" type="radio" name="3 dormitorio de tamaño Mínimo (7m2)" >
-                        <input class="grid-item" type="radio" name="4 dormitorio de tamaño Mínimo (7m2)" >
+                        <input class="grid-item" type="checkbox" name="1 dormitorio de tamaño Mínimo (7m2)" >
+                        <input class="grid-item" type="checkbox" name="2 dormitorio de tamaño Mínimo (7m2)" >
+                        <input class="grid-item" type="checkbox" name="3 dormitorio de tamaño Mínimo (7m2)" >
+                        <input class="grid-item" type="checkbox" name="4 dormitorio de tamaño Mínimo (7m2)" >
                     </div>
 
-                    <div class="grid-container2">
+                    <div class="grid-container2 checkboxToRadio8">
                         <p class="grid-item">Estándar (12m2)</p>
-                        <input class="grid-item" type="radio" name="1 dormitorio de tamaño Estándar (12m2)" >
-                        <input class="grid-item" type="radio" name="2 dormitorio de tamaño Estándar (12m2)" >
-                        <input class="grid-item" type="radio" name="3 dormitorio de tamaño Estándar (12m2)" >
-                        <input class="grid-item" type="radio" name="4 dormitorio de tamaño Estándar (12m2)" >
+                        <input class="grid-item" type="checkbox" name="1 dormitorio de tamaño Estándar (12m2)" >
+                        <input class="grid-item" type="checkbox" name="2 dormitorio de tamaño Estándar (12m2)" >
+                        <input class="grid-item" type="checkbox" name="3 dormitorio de tamaño Estándar (12m2)" >
+                        <input class="grid-item" type="checkbox" name="4 dormitorio de tamaño Estándar (12m2)" >
                     </div>
 
-                    <div class="grid-container2 gris">
+                    <div class="grid-container2 gris checkboxToRadio8">
                         <p class="grid-item" >Grande (18m2)</p>
-                        <input class="grid-item" type="radio" name="1 dormitorio de tamaño Grande (18m2)"  >
-                        <input class="grid-item" type="radio" name="2 dormitorio de tamaño Grande (18m2)" >                      
-                        <input class="grid-item" type="radio" name="3 dormitorio de tamaño Grande (18m2)">
-                        <input class="grid-item" type="radio" name="4 dormitorio de tamaño Grande (18m2)">
+                        <input class="grid-item" type="checkbox" name="1 dormitorio de tamaño Grande (18m2)"  >
+                        <input class="grid-item" type="checkbox" name="2 dormitorio de tamaño Grande (18m2)" >                      
+                        <input class="grid-item" type="checkbox" name="3 dormitorio de tamaño Grande (18m2)">
+                        <input class="grid-item" type="checkbox" name="4 dormitorio de tamaño Grande (18m2)">
                     </div>
 
                 </div>
@@ -471,28 +473,28 @@
                         <p class="grid-item">+ de 3</p>
                     </div>
 
-                    <div class="grid-container2 gris">
+                    <div class="grid-container2 gris checkboxToRadio9">
                         <p class="grid-item">Mínimo (2m2)</p>
-                        <input class="grid-item" type="radio" name="baño" id="1bañoMinimo">
-                        <input class="grid-item" type="radio" name="baño" id="2bañoMinimo">
-                        <input class="grid-item" type="radio" name="baño" id="3bañoMinimo">
-                        <input class="grid-item" type="radio" name="baño" id="+3bañoMinimo">
+                        <input class="grid-item" type="checkbox" name="baño" id="1bañoMinimo">
+                        <input class="grid-item" type="checkbox" name="baño" id="2bañoMinimo">
+                        <input class="grid-item" type="checkbox" name="baño" id="3bañoMinimo">
+                        <input class="grid-item" type="checkbox" name="baño" id="+3bañoMinimo">
                     </div>
 
-                    <div class="grid-container2">
+                    <div class="grid-container2 checkboxToRadio9">
                         <p class="grid-item">Estándar (4m2)</p>
-                        <input class="grid-item" type="radio" name="baño" id="1bañoEstandar">
-                        <input class="grid-item" type="radio" name="baño" id="2bañoEstandar">
-                        <input class="grid-item" type="radio" name="baño" id="3bañoEstandar">
-                        <input class="grid-item" type="radio" name="baño" id="+3bañoEstandar">
+                        <input class="grid-item" type="checkbox" name="baño" id="1bañoEstandar">
+                        <input class="grid-item" type="checkbox" name="baño" id="2bañoEstandar">
+                        <input class="grid-item" type="checkbox" name="baño" id="3bañoEstandar">
+                        <input class="grid-item" type="checkbox" name="baño" id="+3bañoEstandar">
                     </div>
 
-                    <div class="grid-container2 gris">
+                    <div class="grid-container2 gris checkboxToRadio9">
                         <p class="grid-item" >Grande (8m2)</p>
-                        <input class="grid-item" type="radio" name="baño" id="1bañoGrande">
-                        <input class="grid-item" type="radio" name="baño" id="2bañoGrande">
-                        <input class="grid-item" type="radio" name="baño" id="3bañoGrande">
-                        <input class="grid-item" type="radio" name="baño" id="+3bañoGrande">
+                        <input class="grid-item" type="checkbox" name="baño" id="1bañoGrande">
+                        <input class="grid-item" type="checkbox" name="baño" id="2bañoGrande">
+                        <input class="grid-item" type="checkbox" name="baño" id="3bañoGrande">
+                        <input class="grid-item" type="checkbox" name="baño" id="+3bañoGrande">
                     </div>
 
                 </div>
@@ -547,9 +549,9 @@
                         </div>
 
                         <div class="flex-item">
-                            <input type="checkbox" id="otroAdicional" class="input-check" >
+                            <input type="checkbox" id="otroAdicional" class="input-check" style="width: 25px">
                             <label for="otroAdicional" id="adicionalLabel">Otra opción:</label>
-                            <input required type="text" id="otroAdicionalText" name="Espacios adicionales" placeholder="Ingrese otras ideas" >
+                            <input type="text" id="otroAdicionalText" name="Espacios adicionales" placeholder="Ingrese otras ideas" >
                             
                         </div>
                         <small class="error" id="adicional-error" style="margin-left: 110px;"></small>
@@ -575,13 +577,13 @@
 
                     </div>
 
-                    <div class="grid-container3">
-                        <div class="flex-item centroRadios" >
-                            <input class="grid-item " type="radio" name="Estilo Contemporáneo" id="contemporaneo"> 
+                    <div class="grid-container3 ">
+                        <div class="flex-item centroRadios checkboxToRadio10" >
+                            <input class="grid-item " type="checkbox" name="Estilo Contemporáneo" id="contemporaneo"> 
                             <label class="grid-item" for="contemporaneo">Contemporáneo</label>
                         </div> 
-                        <div class="flex-item centroRadios">
-                            <input class="grid-item" type="radio" name="Estilo Americano" id="Americano"> 
+                        <div class="flex-item centroRadios checkboxToRadio10">
+                            <input class="grid-item" type="checkbox" name="Estilo Americano" id="Americano"> 
                             <label class="grid-item" for="Americano">Americano</label>
                         </div> 
                     </div>
@@ -596,12 +598,12 @@
                     </div>
 
                     <div class="grid-container3">
-                        <div class="flex-item centroRadios">
-                            <input class="grid-item" type="radio" name="Estilo Rústico" id="Rustico"> 
+                        <div class="flex-item centroRadios checkboxToRadio10">
+                            <input class="grid-item" type="checkbox" name="Estilo Rústico" id="Rustico"> 
                             <label class="grid-item" for="Rustico">Rústico</label>
                         </div> 
-                        <div class="flex-item centroRadios">
-                            <input class="grid-item" type="radio" name="Otro estilo" id="otroEstiloArquitec"> 
+                        <div class="flex-item centroRadios checkboxToRadio10">
+                            <input class="grid-item" type="checkbox" name="Otro estilo" id="otroEstiloArquitec"> 
                             <label class="grid-item" for="otroEstiloArquitec">Otro</label>
                         </div> 
                     </div>
@@ -613,7 +615,7 @@
                 <!-- MENSAJE  -->
                 <div class="input-contact">
                     <label for="message" class="text-dark">Mensaje: </label>
-                    <textarea id="message" name="Mensaje" placeholder="Escriba acá mensajes adicionales" ></textarea>
+                    <textarea id="message" name="Mensaje" placeholder="Escriba acá mensajes adicionales" onkeyup="checkMessage()"></textarea>
                     <small class="error" id="errorMessage"></small>
                 </div>
 
