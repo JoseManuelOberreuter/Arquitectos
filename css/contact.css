@@ -245,7 +245,9 @@
 
 }
 
-
+#adicional-error1{
+    margin-left: 120px;
+}
 
 
 
@@ -299,6 +301,14 @@
 
     .grid-container3{
         display: block;
+    }
+    
+    #adicional-error1{
+        margin-left: 100px;
+    }
+
+    #adicionalLabel{
+        margin-top: 5px;
     }
     
     

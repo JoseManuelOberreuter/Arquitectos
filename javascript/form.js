@@ -199,6 +199,40 @@ var inputcheck1 = document.getElementById('otroAdicional1');
 var inputtext1 = document.getElementById('otroAdicionalText1');
 var adicionalError1 = document.getElementById('adicional-error1');
 
+function chekearText(){
+    if(inputtext1.value.length == 0){
+        inputtext1.style.border = "2px solid red";
+        adicionalError1.style.display = 'block';
+        adicionalError1.innerHTML = '<b>Debes escribir una opción</b>';
+    }
+
+    else if(inputtext1.value.length > 0){
+        inputtext1.style.border = "2px solid green";
+        adicionalError1.style.display = 'none';
+        adicionalError1.innerHTML = '';
+
+    }
+
+    else{
+        inputtext1.style.borderBottom = "1px solid var(--color3)";
+        adicionalError1.style.display = 'none';
+        adicionalError1.innerHTML = '';
+    }
+
+}
+
+// agregamos evento focus al inputtext1
+inputtext1.addEventListener("focus", function() {
+    // seleccionamos el checkbox correspondiente
+    inputcheck1.checked = true;
+    // desmarcamos los demas checkbox
+    for (var j = 0; j < checkboxes2.length; j++) {
+        if (checkboxes2[j] !== inputcheck1) {
+            checkboxes2[j].checked = false;
+        }
+    }
+});
+
 for (var i = 0; i < checkboxes2.length; i++) {
     checkboxes2[i].addEventListener('change', function() {
         var checkbox = this;
@@ -210,30 +244,22 @@ for (var i = 0; i < checkboxes2.length; i++) {
             }
         }
 
-        if(inputcheck1.checked == true){
+        if(inputcheck1.checked == true || inputtext1.focus == true){
             inputtext1.focus();
-            if(inputtext1.value.length == 0){
-                inputtext1.style.border = "2px solid red";
-                adicionalError1.style.display = 'block';
-                adicionalError1.innerHTML = '<b>Debes escribir una opción</b>';
-            }
-    
-            else{
-                inputtext1.style.border = "1px solid var(--color3)";
-                adicionalError1.style.display = 'none';
-                adicionalError1.innerHTML = '';
-            }
+            inputcheck1.checked = true;
         }
         else{
             inputtext1.blur();
-            inputtext1.style.border = 'none';
+            inputtext1.style.border = "none";
+            inputtext1.style.borderBottom = "1px solid var(--color3)";
             adicionalError1.style.display = 'none';
             adicionalError1.innerHTML = '';
         }
 
 
     });
-}
+};
+
 
 
 // COCINA CHECKEBOX A RADIO
