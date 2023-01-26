@@ -6,8 +6,6 @@
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
 
-
-
 }
 
 .img-galeria {
@@ -17,10 +15,11 @@
     cursor: pointer;
 }
 
-.img-galeria:hover{
-    filter: brightness(60%);
-}
 
+.grayscale {
+    filter: grayscale(100%);
+    transition: all 1s;
+  }
 
 
 @media screen and (max-width: 600px) {
@@ -37,4 +36,9 @@
         display: flex;
         margin: 0 auto;
     }
+
+    .grayscale {
+        filter: grayscale(0%);
+      }
+    
 }

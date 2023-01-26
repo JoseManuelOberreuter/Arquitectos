@@ -19,3 +19,22 @@ var flkty = new Flickity( elem, {
   friction: 0.15
   
     });
+
+var images = document.querySelectorAll('.carousel img');
+
+images.forEach(function(image) {
+  image.addEventListener('mouseenter', function() {
+    this.classList.remove('grayscale');
+  });
+  image.addEventListener('mouseleave', function() {
+    this.classList.add('grayscale');
+  });
+});
+
+flkty.on('select', function() {
+  images.forEach(function(image) {
+    image.classList.add('grayscale');
+  });
+  var selectedImage = flkty.selectedElement.querySelector('img');
+  selectedImage.classList.remove('grayscale');
+});

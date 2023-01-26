@@ -17,6 +17,19 @@ const imagen10 = document.getElementById("imagen10");
 const imagen11 = document.getElementById("imagen11");
 const imagen12 = document.getElementById("imagen12");
 
+const images = document.querySelectorAll(".img-galeria img");
+
+images.forEach(image => {
+  image.addEventListener("mouseover", () => {
+    image.style.filter = "none";
+  });
+  image.addEventListener("mouseout", () => {
+    image.style.filter = "grayscale(100%)";
+  });
+  image.addEventListener("click", () => {
+    image.classList.remove("grayscale");
+  });
+});
 
 
 function scrollPortafolio(){
