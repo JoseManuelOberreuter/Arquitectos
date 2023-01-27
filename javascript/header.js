@@ -10,8 +10,8 @@ function handleScroll() {
   // If the scroll position is greater than 0, it means the user has scrolled away from the top of the page
   if (scrollPosition > 0) {
     // In this case, we can set the div's background to be partially opaque by setting its opacity property to a value between 0 and 1
-    lateralBar.style.background = '#DFD3C3';
-    lateralBarSec.style.background = '#DFD3C3';
+    lateralBar.style.background = '#1F1F1F';
+    lateralBarSec.style.background = '#1F1F1F';
   } else {
     // If the scroll position is 0, it means the user is at the top of the page, so we can set the div's background to be fully transparent by setting its opacity to 0
     lateralBar.style.background = 'rgba(0, 0, 0, 0.0)';
@@ -24,7 +24,7 @@ window.addEventListener('scroll', handleScroll);
 
 
 
-
+// BOTON DE CONTACTO
 
 const overlay = document.getElementById('overlay');
 const openBtn = document.getElementById('openBtn');

@@ -1,6 +1,6 @@
 
 :root{
-    --color1: #DFD3C3;
+    --color1: #ffff;
     --color2: #F8F0DF;
     --color3: #ECE8D9;
     --color4: #FDFAF6;
@@ -13,7 +13,7 @@
 }
 
 body{
-    background-color: #fff;
+    background-color: #ffff var(--color1);
 
 }
 

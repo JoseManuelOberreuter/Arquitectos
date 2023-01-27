@@ -32,11 +32,7 @@
             <a href="portafolios.html" ><span class="link-disabled">Portafolios </span></a>
         </div> 
 
-        <div class="icons-header">
-            <a href="#"><img src="ico/whatsapp.ico" alt=""></a> 
-            <a href="https://www.instagram.com/masking.arquitectos/" target="_blank"><img src="ico/instagram.ico" alt=""></a> 
-            <a href="#"><img src="ico/pinterest.png" alt=""></a> 
-        </div>
+
        
     </div>
 
@@ -45,6 +41,12 @@
         <div class="linkscontact">
             <button id="openBtn"><span class="link-contact">Contacto</span></button> 
         </div> 
+
+        <div class="icons-header">
+            <a href="https://wa.me/+56968323132" target="_blank"><img src="ico/whatsapp.ico" alt=""></a> 
+            <a href="https://www.instagram.com/masking.arquitectos/" target="_blank"><img src="ico/instagram.ico" alt=""></a> 
+            <a href="#" target="_blank"><img src="ico/pinterest.png" alt=""></a> 
+        </div>
     </div>
 
     <!-- BOTON HAMBURGESA -->
@@ -108,35 +110,49 @@
                 
                 <!-- EMAIL -->
                 <div class="input-contact">
-                    <label for="email" class="text-dark"><h4>Correo electronico:</h4></label>
+                    <div class="flex-item">
+                        <label for="email" class="text-dark"><h4>Correo electronico:</h4></label>
+                        <small style="margin: 0px 20px; margin-top: 3px;">Campo obligatorio.</small>
+                    </div>
                     <input required type="email" id="inputemail" name="Email" placeholder="Ingrese su correo electronico" onkeyup="checkEmail()">
                     <small class="error" id="errorEmail"></small>
 
                     <div class="margin"></div>
-
-                    <label for="emailconf" class="text-dark"><h4>Confirmacion de correo electronico:</h4></label>
+                    <div class="flex-item">
+                        <label for="emailconf" class="text-dark"><h4>Confirmacion de correo electronico:</h4></label>
+                        <small style="margin: 0px 20px; margin-top: 3px;">Campo obligatorio.</small>
+                    </div>
                     <input required type="email" id="emailconf" name="Email de Confirmación" placeholder="Vuelva a escribir su correo electronico" onkeyup="checkEmailConf()">
                     <small class="error" id="errorEmailConf"></small>
                 </div>
 
                 <!-- NOMBRE -->
                 <div class="input-contact">
-                    <label for="name"><h4>Nombre completo:</h4></label>
-                    <input autofocus required type="text" id="inputname" name="Nombre completo" maxlength="100" placeholder="Ingrese su nombre" onkeyup="checkName()">
+                    <div class="flex-item">
+                        <label for="name"><h4>Nombre completo:</h4></label>
+                        <small style="margin: 0px 20px; margin-top: 3px;">Campo obligatorio.</small>
+                    </div>
+                    <input required type="text" id="inputname" name="Nombre completo" maxlength="100" placeholder="Ingrese su nombre" onkeyup="checkName()">
                     <small class="error" id="errorName"></small>
                 </div>
 
 
                 <!-- TELEFONO -->
                 <div class="input-contact">
-                    <label for="phone" class="text-dark"><h4>Teléfono de contacto:</h4></label>
+                    <div class="flex-item">
+                        <label for="phone" class="text-dark"><h4>Teléfono de contacto:</h4></label>
+                        <small style="margin: 0px 20px; margin-top: 3px;">Campo obligatorio.</small>
+                    </div>
                     <input required type="tel" id="phone" name="Telefono de contacto" placeholder="Ingrese el número" onkeyup="checkPhone()" >
                     <small class="error" id="errorPhone"></small>
                 </div>
 
                 <!-- UbICACION -->
                 <div class="input-contact">
-                    <label for="ubicacion" class="text-dark"><h4>¿Donde queda el proyecto?</h4></label>
+                    <div class="flex-item">
+                        <label for="ubicacion" class="text-dark"><h4>¿Donde queda el proyecto?</h4></label>
+                        <small style="margin: 0px 20px; margin-top: 3px;">Campo obligatorio.</small>
+                    </div>
                     <input required type="text" id="ubicacion" name="Ubicacion del proyecto" placeholder="Ingrese la dirección, comuna y region" onkeyup="checkUbi()">
                     <small class="error" id="errorUbi"></small>
                 </div>
@@ -200,7 +216,7 @@
                         Si dispones de uno actualmente, o vas a adquirirlo próximamente: ¿Dónde se encuentra ubicado tu terreno? ¿Qué características particulares tiene? (Ejemplo: Terreno en esquina, irregular, con pendiente, entre medianeras, etc.)
                         <br><br>    
                     </label>
-                    <input required type="text" id="datos" name="Datos del terreno" placeholder="Proporciona todos los datos que puedas" onkeyup="checkDatos()">
+                    <input type="text" id="datos" name="Datos del terreno" placeholder="Proporciona todos los datos que puedas" onkeyup="checkDatos()">
                 </div>
                 
 
@@ -214,7 +230,7 @@
                         <img id="primeraimagen" src="img/terreno.png" alt="terreno">    
                     </label>
                     <div class="margin"></div>
-                    <input required type="text" id="terreno" name="Medidas de lote/terreno" placeholder="Ingrese medidas del lote / terreno" onkeyup="checkTerrenos()">
+                    <input type="text" id="terreno" name="Medidas de lote/terreno" placeholder="Ingrese medidas del lote / terreno" onkeyup="checkTerrenos()">
                 </div>
                 
                 
@@ -634,11 +650,10 @@
     <footer>
         <h2>¡Siguenos en nuestras redes sociales!</h2>
         <div class="icons">
-            <a target="_blank" href="#"><img src="ico/linkedin.ico" alt="Linkedin Icon"></a>
-            <a target="_blank" href="#"><img src="ico/instagram.ico" alt="Instagram Icon"></a>
-            <a target="_blank" href="#"><img src="ico/gmail.ico" alt="Facebook Icon"></a>
-            <a target="_blank" href="#"><img src="ico/whatsapp.ico" alt="Facebook Icon"></a>
-        </div> 
+            <a target="_blank" href="https://wa.me/+56968323132"><img src="ico/whatsapp.ico" alt="Whatsapp Icon"></a>
+            <a href="https://www.instagram.com/masking.arquitectos/" target="_blank"><img src="ico/instagram.ico" alt=""></a> 
+            <a href="#" target="_blank"><img src="ico/pinterest.png" alt=""></a> 
+            </div> 
         <p></p>
     </footer>
 
@@ -647,7 +662,7 @@
 
 
     <!-- JAVASCRIPT -->
-    <script src="javascript/header.js"></script>
+    <script src="javascript/headerother.js"></script>
     <script src="javascript/form.js"></script>
     <script src="javascript/hamburger.js"></script>
 

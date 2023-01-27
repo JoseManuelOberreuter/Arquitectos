@@ -6,7 +6,7 @@
     left: 0;
     width: 50px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: #1F1F1F;
     transition: background 2s;
 }
 
@@ -29,7 +29,7 @@
     text-decoration: none;
     letter-spacing: 3px;
 
-    color: #000;
+    color: #ffff;
     cursor: pointer;
 
     transition: color 1s;
@@ -64,7 +64,7 @@
 .icons-header {
 
     display: block;
-    margin-top: 80px;
+    margin-top: 200%;
     margin-left: 10px;
 
 }
@@ -91,7 +91,7 @@
     right: 0;
     width: 50px;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.0);
+    background-color: #1F1F1F;
     transition: background 2s;
 
 }
@@ -115,7 +115,8 @@
     letter-spacing: 3px;
     border: none;
     background: none;
-    color: #000;
+    color: #ffff;
+    ;
     cursor: pointer;    
 
     transition: color 1s;
